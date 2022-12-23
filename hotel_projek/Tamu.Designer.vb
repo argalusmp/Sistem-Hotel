@@ -36,12 +36,12 @@ Partial Class Tamu
         Me.DataGridViewTamu.Name = "DataGridViewTamu"
         Me.DataGridViewTamu.RowHeadersWidth = 51
         Me.DataGridViewTamu.RowTemplate.Height = 24
-        Me.DataGridViewTamu.Size = New System.Drawing.Size(750, 369)
+        Me.DataGridViewTamu.Size = New System.Drawing.Size(718, 369)
         Me.DataGridViewTamu.TabIndex = 0
         '
         'BtnTambah
         '
-        Me.BtnTambah.Location = New System.Drawing.Point(682, 422)
+        Me.BtnTambah.Location = New System.Drawing.Point(650, 420)
         Me.BtnTambah.Name = "BtnTambah"
         Me.BtnTambah.Size = New System.Drawing.Size(91, 32)
         Me.BtnTambah.TabIndex = 1
@@ -50,7 +50,7 @@ Partial Class Tamu
         '
         'BtnEdit
         '
-        Me.BtnEdit.Location = New System.Drawing.Point(574, 422)
+        Me.BtnEdit.Location = New System.Drawing.Point(542, 420)
         Me.BtnEdit.Name = "BtnEdit"
         Me.BtnEdit.Size = New System.Drawing.Size(91, 32)
         Me.BtnEdit.TabIndex = 2
@@ -59,7 +59,7 @@ Partial Class Tamu
         '
         'BtnHapus
         '
-        Me.BtnHapus.Location = New System.Drawing.Point(461, 422)
+        Me.BtnHapus.Location = New System.Drawing.Point(429, 420)
         Me.BtnHapus.Name = "BtnHapus"
         Me.BtnHapus.Size = New System.Drawing.Size(91, 32)
         Me.BtnHapus.TabIndex = 3
@@ -70,7 +70,7 @@ Partial Class Tamu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 498)
+        Me.ClientSize = New System.Drawing.Size(770, 498)
         Me.Controls.Add(Me.BtnHapus)
         Me.Controls.Add(Me.BtnEdit)
         Me.Controls.Add(Me.BtnTambah)
