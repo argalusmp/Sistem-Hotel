@@ -1,4 +1,12 @@
 ﻿Public Class Tambah_Tamu
+    Private Sub TxtNamaTamu_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtNamaTamu.KeyPress
+        If Not Char.IsLetter(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) And Not e.KeyChar = Chr(Keys.Space) Then
+            e.Handled = True
+            MessageBox.Show("Please Insert String Only")
+        End If
+    End Sub
+
+
 
     Private Sub RbPerempuan_CheckedChanged(sender As Object, e As EventArgs) Handles RbPerempuan.CheckedChanged
         Tamu.DataTamu.GSJenisKelamin = "Perempuan"
@@ -22,6 +30,13 @@
         Tamu.DataTamu.AddDataTamuDatabase(Tamu.DataTamu.GSNIK, Tamu.DataTamu.GSNama, Tamu.DataTamu.GSAlamat, Tamu.DataTamu.GSJenisKelamin)
 
         Me.Close()
+    End Sub
+
+    Private Sub TxtNIK_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtNIK.KeyPress
+        If Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) And Not e.KeyChar = Chr(Keys.Space) Then
+            e.Handled = True
+            MessageBox.Show("Please Insert Number Only")
+        End If
     End Sub
 
 End Class
