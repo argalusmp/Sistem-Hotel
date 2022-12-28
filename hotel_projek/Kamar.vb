@@ -1,4 +1,4 @@
-﻿Public Class FormKamar
+﻿Public Class Kamar
     Public Shared classKamar As Class_Kamar
     Public selectedtableKamar As Integer
     Public selectedtableKamarNama
@@ -35,7 +35,15 @@
     End Sub
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
+        Dim selectedKamar As List(Of String) = classKamar.GetDataKamarByIDDatabase(selectedtableKamar)
 
+        classKamar.GSIdJenisKamar = selectedKamar(1)
+        classKamar.GSIdKamar = selectedKamar(2)
+        classKamar.GSNamaKamar = selectedKamar(3)
+        classKamar.GSStatus = selectedKamar(4)
+
+        Dim formEdit = New Edit_Kamar()
+        formEdit.Show()
     End Sub
 
     Private Sub KamarToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles KamarToolStripMenuItem.Click
