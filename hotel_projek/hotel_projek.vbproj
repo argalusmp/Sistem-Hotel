@@ -111,6 +111,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class_Kamar.vb" />
     <Compile Include="DataJenisHotel.vb" />
     <Compile Include="Edit_JenisKamar.Designer.vb">
       <DependentUpon>Edit_JenisKamar.vb</DependentUpon>
