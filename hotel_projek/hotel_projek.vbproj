@@ -111,6 +111,13 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Booking.Designer.vb">
+      <DependentUpon>Booking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Booking.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingBook.vb" />
     <Compile Include="DataJenisHotel.vb" />
     <Compile Include="DataTamu.vb" />
     <Compile Include="Edit_JenisKamar.Designer.vb">
@@ -179,6 +186,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Booking.resx">
+      <DependentUpon>Booking.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Edit_JenisKamar.resx">
       <DependentUpon>Edit_JenisKamar.vb</DependentUpon>
     </EmbeddedResource>

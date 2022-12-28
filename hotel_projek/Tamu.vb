@@ -54,4 +54,8 @@
         Dim formHapus = New Hapus_Tamu()
         formHapus.Show()
     End Sub
+
+    Private Sub DataGridViewTamu_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewTamu.CellContentClick
+
+    End Sub
 End Class
