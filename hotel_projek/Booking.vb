@@ -22,4 +22,9 @@
     Private Sub Booking_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         ReloadDataTableDatabase()
     End Sub
+
+    Private Sub BtnAddBook_Click(sender As Object, e As EventArgs) Handles BtnAddBook.Click
+        Dim tambahBooking = New Tambah_Booking
+        tambahBooking.Show()
+    End Sub
 End Class

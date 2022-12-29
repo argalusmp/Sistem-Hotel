@@ -1,4 +1,5 @@
-﻿Imports System.Text
+﻿Imports System.Data.SqlClient
+Imports System.Text
 Imports MySql.Data.MySqlClient
 
 Public Class BookingBook
@@ -42,6 +43,57 @@ Public Class BookingBook
         sqlRead.Close()
         dbConn.Close()
         Return result
+    End Function
+
+    Public Function AddDataBookingDatabase()
+
+        'dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" + "password=" + password + ";" + "database =" + database
+
+        'Try
+        '    dbConn.Open()
+        '    sqlCommand.Connection = dbConn
+        '    sqlQuery = "INSERT INTO booking_kamar(jenis_kamar, harga_permalam) VALUE('" _
+        '            & Jenis_Kamar & " ', '" _
+        '            & harga_permalam & "')"
+
+        '    sqlCommand = New MySqlCommand(sqlQuery, dbConn)
+        '    sqlRead = sqlCommand.ExecuteReader
+        '    dbConn.Close()
+
+        '    sqlRead.Close()
+        '    dbConn.Close()
+
+
+        'Catch ex As Exception
+        '    Return ex.Message
+        'Finally
+        '    dbConn.Dispose()
+        'End Try
+    End Function
+
+    Public Function getNamaTamu() As DataTable
+        'Dim result As New DataTable
+
+        'dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
+        '    + "password=" + password + ";" + "database =" + database
+        'dbConn.Open()
+        'sqlCommand.Connection = dbConn
+        'sqlCommand.CommandText = "SELECT nama FROM tamu"
+
+        'sqlRead = sqlCommand.ExecuteReader
+        'While (sqlRead)
+        '{
+        'Tambah_Booking.CBNamaTamu.Items.Add(sqlRead["instructorLN"].ToString());
+        '}
+        'Tambah_Booking.CBNamaTamu.Items.Add(sqlRead["instructorLN"].ToString());
+
+
+        'result.Load(sqlRead)
+        'sqlRead.Close()
+        'dbConn.Close()
+        'Return result
+
+
     End Function
 
 

@@ -45,7 +45,7 @@ Partial Class Booking
         Me.BtnAddBook.Name = "BtnAddBook"
         Me.BtnAddBook.Size = New System.Drawing.Size(113, 35)
         Me.BtnAddBook.TabIndex = 1
-        Me.BtnAddBook.Text = "Tambah Buku"
+        Me.BtnAddBook.Text = "7"
         Me.BtnAddBook.UseVisualStyleBackColor = True
         '
         'BtnRemoveBook
