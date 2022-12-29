@@ -13,7 +13,7 @@
     End Sub
 
     Private Sub ReloadDataTableDatabase()
-        DataGridViewKamar.DataSource = classKamar.GetDataKamarDatabase()
+        DataGridKamar.DataSource = classKamar.GetDataKamarDatabase()
     End Sub
 
     Private Sub Kamar_Activated(sender As Object, e As EventArgs) Handles Me.Activated
@@ -25,10 +25,10 @@
         formtambahkamar.Show()
     End Sub
 
-    Private Sub DataGridViewKamar_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewKamar.CellClick
+    Private Sub DataGridKamar_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridKamar.CellClick
         Dim index As Integer = e.RowIndex
         Dim selectedRow As DataGridViewRow
-        selectedRow = DataGridViewKamar.Rows(index)
+        selectedRow = DataGridKamar.Rows(index)
 
         selectedtableKamar = selectedRow.Cells(1).Value
         selectedtableKamarNama = selectedRow.Cells(2).Value
@@ -50,5 +50,10 @@
         Dim formkamar = New Kamar()
         formkamar.Show()
         Me.Close()
+    End Sub
+
+    Private Sub BtnHapus_Click(sender As Object, e As EventArgs) Handles BtnHapus.Click
+        Dim formHapus = New Hapus_Kamar()
+        formHapus.Show()
     End Sub
 End Class

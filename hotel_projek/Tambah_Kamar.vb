@@ -1,4 +1,6 @@
-﻿Public Class Tambah_Kamar
+﻿Imports Mysqlx.XDevAPI.Relational
+
+Public Class Tambah_Kamar
 
     Public Sub New()
 
@@ -7,6 +9,9 @@
 
         ' Add any initialization after the InitializeComponent() call.
         ComboBoxIDJenisKamar.DataSource = Kamar.classKamar.GetIDJenisKamar()
+        'ComboBoxIDJenisKamar.ValueMember = "id_jenis_kamar"
+        'ComboBoxIDJenisKamar.DisplayMember = "id_jenis_kamar"
+
 
     End Sub
 
@@ -17,6 +22,8 @@
     End Sub
 
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
+        'Dim checked = ComboBoxIDJenisKamar.SelectedItem.ToString()
+
         Kamar.classKamar.GSIdJenisKamar = Integer.Parse(ComboBoxIDJenisKamar.SelectedItem)
         Kamar.classKamar.GSIdKamar = Integer.Parse(txtIDKamar.Text)
         Kamar.classKamar.GSNamaKamar = txtNamaKamar.Text.ToString()
@@ -24,9 +31,8 @@
 
         If RbtnKosong.Checked Then
             Kamar.classKamar.GSStatus = 0
-        End If
 
-        If RbtnTerisi.Checked Then
+        ElseIf RbtnTerisi.Checked Then
             Kamar.classKamar.GSStatus = 1
         End If
 
@@ -59,7 +65,7 @@
 
 
 
-    Private Sub txtNamaKamar_Leave(sender As Object, e As EventArgs) Handles txtIDKamar.Leave
+    Private Sub txtNamaKamar_Leave(sender As Object, e As EventArgs) Handles txtNamaKamar.Leave
         If txtNamaKamar.Text.Length < 1 Then
             txtNamaKamar.Select()
             MessageBox.Show("Nama Kamar Tidak Boleh Kosong!")
@@ -70,4 +76,12 @@
             MessageBox.Show("Maksimum Value Nama Kamar 50 Karakter!")
         End If
     End Sub
+
+    'Private Sub ReloadDataTableDatabase()
+    '    ComboBoxIDJenisKamar.DataSource = Kamar.classKamar.GetIDJenisKamar()
+    'End Sub
+
+    'Private Sub Tambah_Kamar_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+    '    ReloadDataTableDatabase()
+    'End Sub
 End Class

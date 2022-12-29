@@ -34,14 +34,14 @@ Partial Class Kamar
         Me.BtnTambah = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.DataGridViewKamar = New System.Windows.Forms.DataGridView()
+        Me.DataGridKamar = New System.Windows.Forms.DataGridView()
         Me.id_jenis_kamar = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.id_kamar = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nama_kamar = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.status = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.MenuBar.SuspendLayout()
-        CType(Me.DataGridViewKamar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridKamar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -149,16 +149,16 @@ Partial Class Kamar
         Me.Label1.TabIndex = 32
         Me.Label1.Text = "Tambah Kamar"
         '
-        'DataGridViewKamar
+        'DataGridKamar
         '
-        Me.DataGridViewKamar.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
-        Me.DataGridViewKamar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewKamar.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_jenis_kamar, Me.id_kamar, Me.nama_kamar, Me.status})
-        Me.DataGridViewKamar.GridColor = System.Drawing.Color.Pink
-        Me.DataGridViewKamar.Location = New System.Drawing.Point(16, 67)
-        Me.DataGridViewKamar.Name = "DataGridViewKamar"
-        Me.DataGridViewKamar.Size = New System.Drawing.Size(743, 275)
-        Me.DataGridViewKamar.TabIndex = 34
+        Me.DataGridKamar.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
+        Me.DataGridKamar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridKamar.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_jenis_kamar, Me.id_kamar, Me.nama_kamar, Me.status})
+        Me.DataGridKamar.GridColor = System.Drawing.Color.Pink
+        Me.DataGridKamar.Location = New System.Drawing.Point(16, 67)
+        Me.DataGridKamar.Name = "DataGridKamar"
+        Me.DataGridKamar.Size = New System.Drawing.Size(743, 275)
+        Me.DataGridKamar.TabIndex = 34
         '
         'id_jenis_kamar
         '
@@ -186,7 +186,7 @@ Partial Class Kamar
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.DataGridViewKamar)
+        Me.GroupBox1.Controls.Add(Me.DataGridKamar)
         Me.GroupBox1.Controls.Add(Me.BtnTambah)
         Me.GroupBox1.Controls.Add(Me.BtnHapus)
         Me.GroupBox1.Controls.Add(Me.BtnEdit)
@@ -196,7 +196,7 @@ Partial Class Kamar
         Me.GroupBox1.TabIndex = 35
         Me.GroupBox1.TabStop = False
         '
-        'FormKamar
+        'Kamar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -206,11 +206,11 @@ Partial Class Kamar
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuBar)
         Me.MainMenuStrip = Me.MenuBar
-        Me.Name = "FormKamar"
+        Me.Name = "Kamar"
         Me.Text = "FormKamar"
         Me.MenuBar.ResumeLayout(False)
         Me.MenuBar.PerformLayout()
-        CType(Me.DataGridViewKamar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridKamar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -229,7 +229,7 @@ Partial Class Kamar
     Friend WithEvents SignOutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents DataGridViewKamar As DataGridView
+    Friend WithEvents DataGridKamar As DataGridView
     Friend WithEvents id_jenis_kamar As DataGridViewTextBoxColumn
     Friend WithEvents id_kamar As DataGridViewTextBoxColumn
     Friend WithEvents nama_kamar As DataGridViewTextBoxColumn

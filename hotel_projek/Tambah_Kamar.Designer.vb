@@ -89,7 +89,6 @@ Partial Class Tambah_Kamar
         Me.txtIDKamar.Name = "txtIDKamar"
         Me.txtIDKamar.Size = New System.Drawing.Size(226, 20)
         Me.txtIDKamar.TabIndex = 5
-        Me.txtIDKamar.Text = "id_kamar"
         '
         'Label4
         '

@@ -1,9 +1,9 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Class_Kamar
-    Private IdKamar As Integer
-    Private IdJenisKamar As Integer
-    Private NamaKamar As String
-    Private Status As String
+    Private id_kamar As Integer
+    Private id_jenis_kamar As Integer
+    Private nama_kamar As String
+    Private status As Boolean
     'Private kamarDataTable As New ArrayList()
 
     Public Shared dbConn As New MySqlConnection
@@ -18,51 +18,54 @@ Public Class Class_Kamar
 
     Public Property GSIdKamar As Integer
         Get
-            Return IdKamar
+            Return id_kamar
         End Get
         Set(value As Integer)
-            IdKamar = value
+            id_kamar = value
         End Set
     End Property
 
     Public Property GSIdJenisKamar As Integer
         Get
-            Return IdJenisKamar
+            Return id_jenis_kamar
         End Get
         Set(value As Integer)
-            IdJenisKamar = value
+            id_jenis_kamar = value
         End Set
     End Property
 
     Public Property GSNamaKamar As String
         Get
-            Return NamaKamar
+            Return nama_kamar
         End Get
         Set(value As String)
-            NamaKamar = value
+            nama_kamar = value
         End Set
     End Property
 
     Public Property GSStatus As Boolean
         Get
-            Return Status
+            Return status
         End Get
         Set(value As Boolean)
-            Status = value
+            status = value
         End Set
     End Property
 
-    Public Function GetIDJenisKamar() As DataTable
-        Dim result As New DataTable
+    Public Function GetIDJenisKamar() As List(Of String)
+        Dim result As New List(Of String)
 
         dbConn.ConnectionString = "server =" + server + ";" + "user id =" + username + ";" _
             + "password =" + password + ";" + "database =" + database
         dbConn.Open()
         sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT id_jenis_kamar AS `ID Jenis Kamar` FROM kamar;"
+        sqlCommand.CommandText = "SELECT id_jenis_kamar FROM `jenis_kamar`;"
         sqlRead = sqlCommand.ExecuteReader
 
-        result.Load(SqlRead)
+        While sqlRead.Read
+            result.Add(sqlRead.GetInt32(0).ToString())
+        End While
+
         sqlRead.Close()
         dbConn.Close()
         Return result
@@ -76,14 +79,10 @@ Public Class Class_Kamar
             + "password =" + password + ";" + "database =" + database
         dbConn.Open()
         sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT id_jenis_kamar AS `ID Jenis Kamar`,
-                                  id_kamar AS `ID Kamar`,
-                                  nama_kamar AS `Nama Kamar`,
-                                  status AS 'Status'
-                                  FROM kamar;"
+        sqlCommand.CommandText = "SELECT id_jenis_kamar AS `ID Jenis Kamar`, id_kamar AS `ID Kamar`, nama_kamar AS `Nama Kamar`, status AS 'Status' FROM kamar;"
         sqlRead = sqlCommand.ExecuteReader
 
-        result.Load(SqlRead)
+        result.Load(sqlRead)
         sqlRead.Close()
         dbConn.Close()
         Return result
@@ -100,11 +99,7 @@ Public Class Class_Kamar
         Try
             dbConn.Open()
             sqlCommand.Connection = dbConn
-            sqlQuery = "INSERT INTO kamar (id_jenis_kamar, id_kamar, nama_kamar, status) VALUE(`" _
-                         & id_jenis_kamar & "`,`" _
-                         & id_kamar & "`,`" _
-                         & nama_kamar & "`,`" _
-                         & status & "`)"
+            sqlQuery = "INSERT INTO kamar (id_jenis_kamar, id_kamar, nama_kamar, status) VALUES ('" & id_jenis_kamar & "','" & id_kamar & "','" & nama_kamar & "','" & status & "');"
 
             sqlCommand = New MySqlCommand(sqlQuery, dbConn)
             sqlRead = sqlCommand.ExecuteReader
@@ -135,8 +130,8 @@ Public Class Class_Kamar
         sqlRead = sqlCommand.ExecuteReader
 
         While sqlRead.Read
-            result.Add(sqlRead.GetString(0).ToString())
-            result.Add(sqlRead.GetString(1).ToString())
+            result.Add(sqlRead.GetInt32(0).ToString())
+            result.Add(sqlRead.GetInt32(1).ToString())
             result.Add(sqlRead.GetString(2).ToString())
             result.Add(sqlRead.GetBoolean(3))
         End While
@@ -163,7 +158,7 @@ Public Class Class_Kamar
                         "id_kamar= `" & id_kamar & "`," &
                         "nama_kamar= `" & nama_kamar & "`," &
                         "status= `" & status & "` " &
-                        "WHERE id_kamar =`" & id_kamar & "`"
+                        "WHERE id_kamar =`" & id_kamar & "`;"
 
 
             sqlCommand = New MySqlCommand(sqlQuery, dbConn)
@@ -178,6 +173,31 @@ Public Class Class_Kamar
             dbConn.Dispose()
         End Try
 
+    End Function
+
+    Public Function DeleteDataKamarByIDDatabase(id_kamar As Integer)
+        dbConn.ConnectionString = "server =" + server + ";" + "user id =" + username + ";" _
+       + "password =" + password + ";" + "database =" + database
+
+        Try
+            dbConn.Open()
+            sqlCommand.Connection = dbConn
+            sqlQuery = "DELETE FROM kamar " &
+                        "WHERE id_kamar=`" & id_kamar & "`;"
+
+            Debug.WriteLine(sqlQuery)
+
+            sqlCommand = New MySqlCommand(sqlQuery, dbConn)
+            sqlRead = sqlCommand.ExecuteReader
+            dbConn.Close()
+
+            sqlRead.Close()
+            dbConn.Close()
+        Catch ex As Exception
+            Return ex.Message
+        Finally
+            dbConn.Dispose()
+        End Try
     End Function
 
 End Class

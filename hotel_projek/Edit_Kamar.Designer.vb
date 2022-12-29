@@ -170,7 +170,6 @@ Partial Class Edit_Kamar
         Me.txtIDKamar.Name = "txtIDKamar"
         Me.txtIDKamar.Size = New System.Drawing.Size(226, 20)
         Me.txtIDKamar.TabIndex = 21
-        Me.txtIDKamar.Text = "id_kamar"
         '
         'Label3
         '
