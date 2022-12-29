@@ -7,10 +7,10 @@
 
         ' Add any initialization after the InitializeComponent() call.
         ComboBoxIDJenisKamar.DataSource = Kamar.classKamar.GetIDJenisKamar()
-        ComboBoxIDJenisKamar.ValueMember = "id_jenis_kamar"
-        ComboBoxIDJenisKamar.DisplayMember = "id_jenis_kamar"
+        'ComboBoxIDJenisKamar.ValueMember = "id_jenis_kamar"
+        'ComboBoxIDJenisKamar.DisplayMember = "id_jenis_kamar"
 
-        txtIDKamar.Text = Kamar.classKamar.GSIdKamar
+        LblIdKamar.Text = Kamar.selectedtableKamar
         txtNamaKamar.Text = Kamar.classKamar.GSNamaKamar
         ComboBoxIDJenisKamar.SelectedItem() = Kamar.classKamar.GSIdJenisKamar
 
@@ -29,7 +29,7 @@
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
         Kamar.classKamar.GSIdJenisKamar = Integer.Parse(ComboBoxIDJenisKamar.SelectedItem())
-        Kamar.classKamar.GSIdKamar = Integer.Parse(txtIDKamar.Text)
+        'Kamar.classKamar.GSIdKamar = Integer.Parse(txtIDKamar.Text)
         Kamar.classKamar.GSNamaKamar = txtNamaKamar.Text.ToString()
 
         If RbtnKosong.Checked Then
@@ -39,7 +39,7 @@
         End If
 
         Kamar.classKamar.UpadateDataKamarByIDDatabase(Kamar.classKamar.GSIdJenisKamar,
-                                                      Kamar.classKamar.GSIdKamar,
+                                                      Kamar.selectedtableKamar,
                                                       Kamar.classKamar.GSNamaKamar,
                                                       Kamar.classKamar.GSStatus)
 

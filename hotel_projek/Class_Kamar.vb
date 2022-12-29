@@ -1,10 +1,9 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Class_Kamar
-    Private id_kamar As Integer
-    Private id_jenis_kamar As Integer
-    Private nama_kamar As String
-    Private status As Boolean
-    'Private kamarDataTable As New ArrayList()
+    Public Shared id_kamar As Integer
+    Public Shared id_jenis_kamar As Integer
+    Public Shared nama_kamar As String
+    Public Shared status As Boolean
 
     Public Shared dbConn As New MySqlConnection
     Public Shared sqlCommand As New MySqlCommand
@@ -15,15 +14,6 @@ Public Class Class_Kamar
     Private username As String = "root"
     Private password As String = ""
     Private database As String = "hotel"
-
-    Public Property GSIdKamar As Integer
-        Get
-            Return id_kamar
-        End Get
-        Set(value As Integer)
-            id_kamar = value
-        End Set
-    End Property
 
     Public Property GSIdJenisKamar As Integer
         Get
@@ -79,7 +69,7 @@ Public Class Class_Kamar
             + "password =" + password + ";" + "database =" + database
         dbConn.Open()
         sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT id_jenis_kamar AS `ID Jenis Kamar`, id_kamar AS `ID Kamar`, nama_kamar AS `Nama Kamar`, status AS 'Status' FROM kamar;"
+        sqlCommand.CommandText = "SELECT id_kamar AS `ID Kamar`, id_jenis_kamar AS `ID Jenis Kamar`, nama_kamar AS `Nama Kamar`, status AS 'Status' FROM kamar;"
         sqlRead = sqlCommand.ExecuteReader
 
         result.Load(sqlRead)
@@ -89,7 +79,6 @@ Public Class Class_Kamar
     End Function
 
     Public Function AddDataKamarDatabase(id_jenis_kamar As Integer,
-                                         id_kamar As Integer,
                                          nama_kamar As String,
                                          status As Boolean)
 
@@ -99,7 +88,7 @@ Public Class Class_Kamar
         Try
             dbConn.Open()
             sqlCommand.Connection = dbConn
-            sqlQuery = "INSERT INTO kamar (id_jenis_kamar, id_kamar, nama_kamar, status) VALUES ('" & id_jenis_kamar & "','" & id_kamar & "','" & nama_kamar & "','" & status & "');"
+            sqlQuery = "INSERT INTO kamar (id_jenis_kamar, nama_kamar, status) VALUES ('" & id_jenis_kamar & "','" & nama_kamar & "','" & status & "');"
 
             sqlCommand = New MySqlCommand(sqlQuery, dbConn)
             sqlRead = sqlCommand.ExecuteReader
@@ -122,8 +111,8 @@ Public Class Class_Kamar
             + "password =" + password + ";" + "database =" + database
         dbConn.Open()
         sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "Select id_jenis_kamar As `ID Jenis Kamar`,
-                                  id_kamar AS `ID Kamar`,
+        sqlCommand.CommandText = "Select id_kamar AS `ID Kamar`,
+                                  id_jenis_kamar As `ID Jenis Kamar`,
                                   nama_kamar As `Nama Kamar`,
                                   Status AS 'Status'
                                   From kamar WHERE id_kamar=`" & id_kamar & "`;"
@@ -155,7 +144,6 @@ Public Class Class_Kamar
             sqlCommand.Connection = dbConn
             sqlQuery = "UPDATE kamar SET " &
                         "id_jenis_kamar= `" & id_jenis_kamar & "`," &
-                        "id_kamar= `" & id_kamar & "`," &
                         "nama_kamar= `" & nama_kamar & "`," &
                         "status= `" & status & "` " &
                         "WHERE id_kamar =`" & id_kamar & "`;"

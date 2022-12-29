@@ -35,11 +35,11 @@ Partial Class Kamar
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridKamar = New System.Windows.Forms.DataGridView()
-        Me.id_jenis_kamar = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.id_kamar = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.id_jenis_kamar = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nama_kamar = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.status = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.MenuBar.SuspendLayout()
         CType(Me.DataGridKamar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -151,26 +151,38 @@ Partial Class Kamar
         '
         'DataGridKamar
         '
-        Me.DataGridKamar.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
+        Me.DataGridKamar.BackgroundColor = System.Drawing.Color.White
         Me.DataGridKamar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridKamar.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_jenis_kamar, Me.id_kamar, Me.nama_kamar, Me.status})
-        Me.DataGridKamar.GridColor = System.Drawing.Color.Pink
-        Me.DataGridKamar.Location = New System.Drawing.Point(16, 67)
+        Me.DataGridKamar.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_kamar, Me.id_jenis_kamar, Me.nama_kamar, Me.status})
+        Me.DataGridKamar.GridColor = System.Drawing.Color.Black
+        Me.DataGridKamar.Location = New System.Drawing.Point(16, 65)
         Me.DataGridKamar.Name = "DataGridKamar"
         Me.DataGridKamar.Size = New System.Drawing.Size(743, 275)
         Me.DataGridKamar.TabIndex = 34
         '
-        'id_jenis_kamar
+        'GroupBox1
         '
-        Me.id_jenis_kamar.HeaderText = "ID Jenis Kamar"
-        Me.id_jenis_kamar.Name = "id_jenis_kamar"
-        Me.id_jenis_kamar.Width = 150
+        Me.GroupBox1.Controls.Add(Me.DataGridKamar)
+        Me.GroupBox1.Controls.Add(Me.BtnTambah)
+        Me.GroupBox1.Controls.Add(Me.BtnHapus)
+        Me.GroupBox1.Controls.Add(Me.BtnEdit)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 138)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(776, 358)
+        Me.GroupBox1.TabIndex = 35
+        Me.GroupBox1.TabStop = False
         '
         'id_kamar
         '
         Me.id_kamar.HeaderText = "ID Kamar"
         Me.id_kamar.Name = "id_kamar"
         Me.id_kamar.Width = 150
+        '
+        'id_jenis_kamar
+        '
+        Me.id_jenis_kamar.HeaderText = "ID Jenis Kamar"
+        Me.id_jenis_kamar.Name = "id_jenis_kamar"
+        Me.id_jenis_kamar.Width = 150
         '
         'nama_kamar
         '
@@ -183,18 +195,6 @@ Partial Class Kamar
         Me.status.HeaderText = "Status"
         Me.status.Name = "status"
         Me.status.Width = 150
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.DataGridKamar)
-        Me.GroupBox1.Controls.Add(Me.BtnTambah)
-        Me.GroupBox1.Controls.Add(Me.BtnHapus)
-        Me.GroupBox1.Controls.Add(Me.BtnEdit)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 135)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(776, 358)
-        Me.GroupBox1.TabIndex = 35
-        Me.GroupBox1.TabStop = False
         '
         'Kamar
         '
@@ -230,9 +230,9 @@ Partial Class Kamar
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridKamar As DataGridView
-    Friend WithEvents id_jenis_kamar As DataGridViewTextBoxColumn
+    Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents id_kamar As DataGridViewTextBoxColumn
+    Friend WithEvents id_jenis_kamar As DataGridViewTextBoxColumn
     Friend WithEvents nama_kamar As DataGridViewTextBoxColumn
     Friend WithEvents status As DataGridViewTextBoxColumn
-    Friend WithEvents GroupBox1 As GroupBox
 End Class

@@ -26,7 +26,6 @@ Partial Class Edit_Kamar
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.BtnEdit = New System.Windows.Forms.Button()
         Me.RbtnKosong = New System.Windows.Forms.RadioButton()
         Me.RbtnTerisi = New System.Windows.Forms.RadioButton()
@@ -35,10 +34,11 @@ Partial Class Edit_Kamar
         Me.Label5 = New System.Windows.Forms.Label()
         Me.ComboBoxIDJenisKamar = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtIDKamar = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.LblIdKamar = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'BtnBack
@@ -73,20 +73,11 @@ Partial Class Edit_Kamar
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(211, 152)
+        Me.Label8.Location = New System.Drawing.Point(211, 204)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(10, 13)
         Me.Label8.TabIndex = 31
         Me.Label8.Text = ":"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(211, 204)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(10, 13)
-        Me.Label7.TabIndex = 30
-        Me.Label7.Text = ":"
         '
         'BtnEdit
         '
@@ -150,7 +141,7 @@ Partial Class Edit_Kamar
         'ComboBoxIDJenisKamar
         '
         Me.ComboBoxIDJenisKamar.FormattingEnabled = True
-        Me.ComboBoxIDJenisKamar.Location = New System.Drawing.Point(281, 150)
+        Me.ComboBoxIDJenisKamar.Location = New System.Drawing.Point(281, 202)
         Me.ComboBoxIDJenisKamar.Name = "ComboBoxIDJenisKamar"
         Me.ComboBoxIDJenisKamar.Size = New System.Drawing.Size(226, 21)
         Me.ComboBoxIDJenisKamar.TabIndex = 23
@@ -158,27 +149,11 @@ Partial Class Edit_Kamar
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(113, 152)
+        Me.Label4.Location = New System.Drawing.Point(113, 204)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(78, 13)
         Me.Label4.TabIndex = 22
         Me.Label4.Text = "ID Jenis Kamar"
-        '
-        'txtIDKamar
-        '
-        Me.txtIDKamar.Location = New System.Drawing.Point(281, 202)
-        Me.txtIDKamar.Name = "txtIDKamar"
-        Me.txtIDKamar.Size = New System.Drawing.Size(226, 20)
-        Me.txtIDKamar.TabIndex = 21
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(113, 204)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(51, 13)
-        Me.Label3.TabIndex = 20
-        Me.Label3.Text = "ID Kamar"
         '
         'Label2
         '
@@ -202,11 +177,40 @@ Partial Class Edit_Kamar
         Me.Label1.TabIndex = 18
         Me.Label1.Text = "Edit Kamar"
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(211, 154)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(10, 13)
+        Me.Label7.TabIndex = 30
+        Me.Label7.Text = ":"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(113, 154)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(51, 13)
+        Me.Label3.TabIndex = 34
+        Me.Label3.Text = "ID Kamar"
+        '
+        'LblIdKamar
+        '
+        Me.LblIdKamar.AutoSize = True
+        Me.LblIdKamar.Location = New System.Drawing.Point(280, 154)
+        Me.LblIdKamar.Name = "LblIdKamar"
+        Me.LblIdKamar.Size = New System.Drawing.Size(51, 13)
+        Me.LblIdKamar.TabIndex = 35
+        Me.LblIdKamar.Text = "ID Kamar"
+        '
         'Edit_Kamar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 479)
+        Me.Controls.Add(Me.LblIdKamar)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
@@ -219,8 +223,6 @@ Partial Class Edit_Kamar
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.ComboBoxIDJenisKamar)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.txtIDKamar)
-        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BtnBack)
@@ -235,7 +237,6 @@ Partial Class Edit_Kamar
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents Label7 As Label
     Friend WithEvents BtnEdit As Button
     Friend WithEvents RbtnKosong As RadioButton
     Friend WithEvents RbtnTerisi As RadioButton
@@ -244,8 +245,9 @@ Partial Class Edit_Kamar
     Friend WithEvents Label5 As Label
     Friend WithEvents ComboBoxIDJenisKamar As ComboBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents txtIDKamar As TextBox
-    Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents LblIdKamar As Label
 End Class

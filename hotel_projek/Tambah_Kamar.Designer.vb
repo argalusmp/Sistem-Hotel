@@ -25,8 +25,6 @@ Partial Class Tambah_Kamar
         Me.BtnBack = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtIDKamar = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ComboBoxIDJenisKamar = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -35,7 +33,6 @@ Partial Class Tambah_Kamar
         Me.RbtnTerisi = New System.Windows.Forms.RadioButton()
         Me.RbtnKosong = New System.Windows.Forms.RadioButton()
         Me.BtnTambah = New System.Windows.Forms.Button()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -74,22 +71,6 @@ Partial Class Tambah_Kamar
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Tambah Kamar"
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(108, 213)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(51, 13)
-        Me.Label3.TabIndex = 4
-        Me.Label3.Text = "ID Kamar"
-        '
-        'txtIDKamar
-        '
-        Me.txtIDKamar.Location = New System.Drawing.Point(276, 211)
-        Me.txtIDKamar.Name = "txtIDKamar"
-        Me.txtIDKamar.Size = New System.Drawing.Size(226, 20)
-        Me.txtIDKamar.TabIndex = 5
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -110,7 +91,7 @@ Partial Class Tambah_Kamar
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(108, 264)
+        Me.Label5.Location = New System.Drawing.Point(108, 212)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(68, 13)
         Me.Label5.TabIndex = 8
@@ -119,7 +100,7 @@ Partial Class Tambah_Kamar
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(108, 314)
+        Me.Label6.Location = New System.Drawing.Point(108, 262)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(37, 13)
         Me.Label6.TabIndex = 9
@@ -127,7 +108,7 @@ Partial Class Tambah_Kamar
         '
         'txtNamaKamar
         '
-        Me.txtNamaKamar.Location = New System.Drawing.Point(276, 261)
+        Me.txtNamaKamar.Location = New System.Drawing.Point(276, 209)
         Me.txtNamaKamar.Name = "txtNamaKamar"
         Me.txtNamaKamar.Size = New System.Drawing.Size(407, 20)
         Me.txtNamaKamar.TabIndex = 10
@@ -135,7 +116,7 @@ Partial Class Tambah_Kamar
         'RbtnTerisi
         '
         Me.RbtnTerisi.AutoSize = True
-        Me.RbtnTerisi.Location = New System.Drawing.Point(276, 314)
+        Me.RbtnTerisi.Location = New System.Drawing.Point(276, 262)
         Me.RbtnTerisi.Name = "RbtnTerisi"
         Me.RbtnTerisi.Size = New System.Drawing.Size(50, 17)
         Me.RbtnTerisi.TabIndex = 11
@@ -146,7 +127,7 @@ Partial Class Tambah_Kamar
         'RbtnKosong
         '
         Me.RbtnKosong.AutoSize = True
-        Me.RbtnKosong.Location = New System.Drawing.Point(276, 356)
+        Me.RbtnKosong.Location = New System.Drawing.Point(276, 304)
         Me.RbtnKosong.Name = "RbtnKosong"
         Me.RbtnKosong.Size = New System.Drawing.Size(61, 17)
         Me.RbtnKosong.TabIndex = 12
@@ -159,21 +140,12 @@ Partial Class Tambah_Kamar
         Me.BtnTambah.BackColor = System.Drawing.Color.Green
         Me.BtnTambah.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnTambah.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.BtnTambah.Location = New System.Drawing.Point(608, 405)
+        Me.BtnTambah.Location = New System.Drawing.Point(608, 347)
         Me.BtnTambah.Name = "BtnTambah"
         Me.BtnTambah.Size = New System.Drawing.Size(75, 30)
         Me.BtnTambah.TabIndex = 13
         Me.BtnTambah.Text = "Tambah"
         Me.BtnTambah.UseVisualStyleBackColor = False
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(206, 213)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(10, 13)
-        Me.Label7.TabIndex = 14
-        Me.Label7.Text = ":"
         '
         'Label8
         '
@@ -187,7 +159,7 @@ Partial Class Tambah_Kamar
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(206, 264)
+        Me.Label9.Location = New System.Drawing.Point(206, 212)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(10, 13)
         Me.Label9.TabIndex = 16
@@ -196,7 +168,7 @@ Partial Class Tambah_Kamar
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(206, 314)
+        Me.Label10.Location = New System.Drawing.Point(206, 262)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(10, 13)
         Me.Label10.TabIndex = 17
@@ -206,11 +178,10 @@ Partial Class Tambah_Kamar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(810, 492)
+        Me.ClientSize = New System.Drawing.Size(803, 427)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.BtnTambah)
         Me.Controls.Add(Me.RbtnKosong)
         Me.Controls.Add(Me.RbtnTerisi)
@@ -219,8 +190,6 @@ Partial Class Tambah_Kamar
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.ComboBoxIDJenisKamar)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.txtIDKamar)
-        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BtnBack)
@@ -234,8 +203,6 @@ Partial Class Tambah_Kamar
     Friend WithEvents BtnBack As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents txtIDKamar As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents ComboBoxIDJenisKamar As ComboBox
     Friend WithEvents Label5 As Label
@@ -244,7 +211,6 @@ Partial Class Tambah_Kamar
     Friend WithEvents RbtnTerisi As RadioButton
     Friend WithEvents RbtnKosong As RadioButton
     Friend WithEvents BtnTambah As Button
-    Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label

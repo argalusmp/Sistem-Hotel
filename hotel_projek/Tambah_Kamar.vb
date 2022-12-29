@@ -22,10 +22,9 @@ Public Class Tambah_Kamar
     End Sub
 
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
-        'Dim checked = ComboBoxIDJenisKamar.SelectedItem.ToString()
 
         Kamar.classKamar.GSIdJenisKamar = Integer.Parse(ComboBoxIDJenisKamar.SelectedItem)
-        Kamar.classKamar.GSIdKamar = Integer.Parse(txtIDKamar.Text)
+        'Kamar.classKamar.GSIdKamar = Integer.Parse(txtIDKamar.Text)
         Kamar.classKamar.GSNamaKamar = txtNamaKamar.Text.ToString()
 
 
@@ -37,31 +36,30 @@ Public Class Tambah_Kamar
         End If
 
         Kamar.classKamar.AddDataKamarDatabase(Kamar.classKamar.GSIdJenisKamar,
-                                              Kamar.classKamar.GSIdKamar,
                                               Kamar.classKamar.GSNamaKamar,
                                               Kamar.classKamar.GSStatus)
 
         Me.Close()
     End Sub
 
-    Private Sub txtIDKamar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtIDKamar.KeyPress
+    Private Sub txtIDKamar_KeyPress(sender As Object, e As KeyPressEventArgs)
         If Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) Then
             e.Handled = True
             MessageBox.Show("Tulis ID dalam format angka (contoh: 404)")
         End If
     End Sub
 
-    Private Sub txtIDKamar_Leave(sender As Object, e As EventArgs) Handles txtIDKamar.Leave
-        If txtIDKamar.Text.Length < 1 Then
-            txtIDKamar.Select()
-            MessageBox.Show("ID Kamar Tidak Boleh Kosong!")
-        End If
+    'Private Sub txtIDKamar_Leave(sender As Object, e As EventArgs) Handles txtIDKamar.Leave
+    '    If txtIDKamar.Text.Length < 1 Then
+    '        txtIDKamar.Select()
+    '        MessageBox.Show("ID Kamar Tidak Boleh Kosong!")
+    '    End If
 
-        If txtIDKamar.Text.Length > 11 Then
-            txtIDKamar.Select()
-            MessageBox.Show("Maksimum Value ID Kamar 11 Angka!")
-        End If
-    End Sub
+    '    If txtIDKamar.Text.Length > 11 Then
+    '        txtIDKamar.Select()
+    '        MessageBox.Show("Maksimum Value ID Kamar 11 Angka!")
+    '    End If
+    'End Sub
 
 
 

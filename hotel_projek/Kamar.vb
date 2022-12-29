@@ -30,7 +30,7 @@
         Dim selectedRow As DataGridViewRow
         selectedRow = DataGridKamar.Rows(index)
 
-        selectedtableKamar = selectedRow.Cells(1).Value
+        selectedtableKamar = selectedRow.Cells(0).Value
         selectedtableKamarNama = selectedRow.Cells(2).Value
     End Sub
 
@@ -38,9 +38,8 @@
         Dim selectedKamar As List(Of String) = classKamar.GetDataKamarByIDDatabase(selectedtableKamar)
 
         classKamar.GSIdJenisKamar = selectedKamar(1)
-        classKamar.GSIdKamar = selectedKamar(2)
-        classKamar.GSNamaKamar = selectedKamar(3)
-        classKamar.GSStatus = selectedKamar(4)
+        classKamar.GSNamaKamar = selectedKamar(2)
+        classKamar.GSStatus = selectedKamar(3)
 
         Dim formEdit = New Edit_Kamar()
         formEdit.Show()
