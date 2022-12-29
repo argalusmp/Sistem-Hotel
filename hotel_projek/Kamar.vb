@@ -1,7 +1,7 @@
 ﻿Public Class Kamar
     Public Shared classKamar As Class_Kamar
-    Public selectedtableKamar As Integer
-    Public selectedtableKamarNama
+    Public Shared selectedtableKamar As Integer
+    Public Shared selectedtableKamarNama
     Public Sub New()
 
         ' This call is required by the designer.
@@ -37,9 +37,9 @@
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
         Dim selectedKamar As List(Of String) = classKamar.GetDataKamarByIDDatabase(selectedtableKamar)
 
-        classKamar.GSIdJenisKamar = selectedKamar(1)
-        classKamar.GSNamaKamar = selectedKamar(2)
-        classKamar.GSStatus = selectedKamar(3)
+        classKamar.GSIdJenisKamar = selectedKamar(0)
+        classKamar.GSNamaKamar = selectedKamar(1)
+        classKamar.GSStatus = selectedKamar(2)
 
         Dim formEdit = New Edit_Kamar()
         formEdit.Show()

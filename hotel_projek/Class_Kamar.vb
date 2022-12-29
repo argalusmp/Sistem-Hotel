@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports Google.Protobuf
+Imports MySql.Data.MySqlClient
 Public Class Class_Kamar
     Public Shared id_kamar As Integer
     Public Shared id_jenis_kamar As Integer
@@ -73,6 +74,7 @@ Public Class Class_Kamar
         sqlRead = sqlCommand.ExecuteReader
 
         result.Load(sqlRead)
+
         sqlRead.Close()
         dbConn.Close()
         Return result
@@ -107,23 +109,26 @@ Public Class Class_Kamar
     Public Function GetDataKamarByIDDatabase(id_kamar As Integer) As List(Of String)
         Dim result As New List(Of String)
 
+        id_kamar = Kamar.selectedtableKamar
+
         dbConn.ConnectionString = "server =" + server + ";" + "user id =" + username + ";" _
             + "password =" + password + ";" + "database =" + database
         dbConn.Open()
         sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "Select id_kamar AS `ID Kamar`,
-                                  id_jenis_kamar As `ID Jenis Kamar`,
+        sqlCommand.CommandText = "Select id_jenis_kamar As `ID Jenis Kamar`,
                                   nama_kamar As `Nama Kamar`,
                                   Status AS 'Status'
-                                  From kamar WHERE id_kamar=`" & id_kamar & "`;"
+                                  From kamar WHERE id_kamar=" & id_kamar & ";"
         sqlRead = sqlCommand.ExecuteReader
 
         While sqlRead.Read
             result.Add(sqlRead.GetInt32(0).ToString())
-            result.Add(sqlRead.GetInt32(1).ToString())
-            result.Add(sqlRead.GetString(2).ToString())
-            result.Add(sqlRead.GetBoolean(3))
+            result.Add(sqlRead.GetString(1).ToString())
+            result.Add(sqlRead.GetBoolean(2))
+
         End While
+
+
 
         sqlRead.Close()
         dbConn.Close()
@@ -131,8 +136,8 @@ Public Class Class_Kamar
 
     End Function
 
-    Public Function UpadateDataKamarByIDDatabase(id_jenis_kamar As Integer,
-                                                id_kamar As Integer,
+    Public Function UpdateDataKamarByIDDatabase(id_kamar As Integer,
+                                                id_jenis_kamar As Integer,
                                                 nama_kamar As String,
                                                 status As Boolean)
 
@@ -142,12 +147,10 @@ Public Class Class_Kamar
         Try
             dbConn.Open()
             sqlCommand.Connection = dbConn
-            sqlQuery = "UPDATE kamar SET " &
-                        "id_jenis_kamar= `" & id_jenis_kamar & "`," &
-                        "nama_kamar= `" & nama_kamar & "`," &
-                        "status= `" & status & "` " &
-                        "WHERE id_kamar =`" & id_kamar & "`;"
-
+            sqlQuery = "UPDATE kamar SET id_jenis_kamar= " & id_jenis_kamar & ", " &
+                        "nama_kamar= '" & nama_kamar & "', " &
+                        "status= " & status & " " &
+                        "WHERE id_kamar = " & id_kamar & ";"
 
             sqlCommand = New MySqlCommand(sqlQuery, dbConn)
             sqlRead = sqlCommand.ExecuteReader
@@ -171,7 +174,7 @@ Public Class Class_Kamar
             dbConn.Open()
             sqlCommand.Connection = dbConn
             sqlQuery = "DELETE FROM kamar " &
-                        "WHERE id_kamar=`" & id_kamar & "`;"
+                        "WHERE id_kamar= " & id_kamar & ";"
 
             Debug.WriteLine(sqlQuery)
 

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Kamar
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,8 +20,9 @@ Partial Class Kamar
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.MenuBar = New System.Windows.Forms.MenuStrip()
         Me.JenisKamarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.KamarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -36,10 +37,6 @@ Partial Class Kamar
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridKamar = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.id_kamar = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.id_jenis_kamar = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.nama_kamar = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.status = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MenuBar.SuspendLayout()
         CType(Me.DataGridKamar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -151,12 +148,25 @@ Partial Class Kamar
         '
         'DataGridKamar
         '
+        Me.DataGridKamar.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridKamar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridKamar.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
         Me.DataGridKamar.BackgroundColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridKamar.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridKamar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridKamar.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_kamar, Me.id_jenis_kamar, Me.nama_kamar, Me.status})
-        Me.DataGridKamar.GridColor = System.Drawing.Color.Black
+        Me.DataGridKamar.GridColor = System.Drawing.Color.Pink
         Me.DataGridKamar.Location = New System.Drawing.Point(16, 65)
         Me.DataGridKamar.Name = "DataGridKamar"
+        Me.DataGridKamar.ReadOnly = True
         Me.DataGridKamar.Size = New System.Drawing.Size(743, 275)
         Me.DataGridKamar.TabIndex = 34
         '
@@ -171,30 +181,6 @@ Partial Class Kamar
         Me.GroupBox1.Size = New System.Drawing.Size(776, 358)
         Me.GroupBox1.TabIndex = 35
         Me.GroupBox1.TabStop = False
-        '
-        'id_kamar
-        '
-        Me.id_kamar.HeaderText = "ID Kamar"
-        Me.id_kamar.Name = "id_kamar"
-        Me.id_kamar.Width = 150
-        '
-        'id_jenis_kamar
-        '
-        Me.id_jenis_kamar.HeaderText = "ID Jenis Kamar"
-        Me.id_jenis_kamar.Name = "id_jenis_kamar"
-        Me.id_jenis_kamar.Width = 150
-        '
-        'nama_kamar
-        '
-        Me.nama_kamar.HeaderText = "Nama Kamar"
-        Me.nama_kamar.Name = "nama_kamar"
-        Me.nama_kamar.Width = 250
-        '
-        'status
-        '
-        Me.status.HeaderText = "Status"
-        Me.status.Name = "status"
-        Me.status.Width = 150
         '
         'Kamar
         '
@@ -231,8 +217,4 @@ Partial Class Kamar
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridKamar As DataGridView
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents id_kamar As DataGridViewTextBoxColumn
-    Friend WithEvents id_jenis_kamar As DataGridViewTextBoxColumn
-    Friend WithEvents nama_kamar As DataGridViewTextBoxColumn
-    Friend WithEvents status As DataGridViewTextBoxColumn
 End Class

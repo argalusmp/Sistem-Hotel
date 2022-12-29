@@ -9,8 +9,6 @@ Public Class Tambah_Kamar
 
         ' Add any initialization after the InitializeComponent() call.
         ComboBoxIDJenisKamar.DataSource = Kamar.classKamar.GetIDJenisKamar()
-        'ComboBoxIDJenisKamar.ValueMember = "id_jenis_kamar"
-        'ComboBoxIDJenisKamar.DisplayMember = "id_jenis_kamar"
 
 
     End Sub
@@ -24,7 +22,6 @@ Public Class Tambah_Kamar
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
 
         Kamar.classKamar.GSIdJenisKamar = Integer.Parse(ComboBoxIDJenisKamar.SelectedItem)
-        'Kamar.classKamar.GSIdKamar = Integer.Parse(txtIDKamar.Text)
         Kamar.classKamar.GSNamaKamar = txtNamaKamar.Text.ToString()
 
 
@@ -49,19 +46,6 @@ Public Class Tambah_Kamar
         End If
     End Sub
 
-    'Private Sub txtIDKamar_Leave(sender As Object, e As EventArgs) Handles txtIDKamar.Leave
-    '    If txtIDKamar.Text.Length < 1 Then
-    '        txtIDKamar.Select()
-    '        MessageBox.Show("ID Kamar Tidak Boleh Kosong!")
-    '    End If
-
-    '    If txtIDKamar.Text.Length > 11 Then
-    '        txtIDKamar.Select()
-    '        MessageBox.Show("Maksimum Value ID Kamar 11 Angka!")
-    '    End If
-    'End Sub
-
-
 
     Private Sub txtNamaKamar_Leave(sender As Object, e As EventArgs) Handles txtNamaKamar.Leave
         If txtNamaKamar.Text.Length < 1 Then
@@ -75,11 +59,4 @@ Public Class Tambah_Kamar
         End If
     End Sub
 
-    'Private Sub ReloadDataTableDatabase()
-    '    ComboBoxIDJenisKamar.DataSource = Kamar.classKamar.GetIDJenisKamar()
-    'End Sub
-
-    'Private Sub Tambah_Kamar_Activated(sender As Object, e As EventArgs) Handles Me.Activated
-    '    ReloadDataTableDatabase()
-    'End Sub
 End Class
