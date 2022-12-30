@@ -36,7 +36,7 @@ Partial Class Booking
         Me.DataGridViewBooking.Name = "DataGridViewBooking"
         Me.DataGridViewBooking.RowHeadersWidth = 51
         Me.DataGridViewBooking.RowTemplate.Height = 24
-        Me.DataGridViewBooking.Size = New System.Drawing.Size(635, 297)
+        Me.DataGridViewBooking.Size = New System.Drawing.Size(1185, 297)
         Me.DataGridViewBooking.TabIndex = 0
         '
         'BtnAddBook
@@ -70,7 +70,7 @@ Partial Class Booking
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1285, 450)
         Me.Controls.Add(Me.BtnEditBook)
         Me.Controls.Add(Me.BtnRemoveBook)
         Me.Controls.Add(Me.BtnAddBook)

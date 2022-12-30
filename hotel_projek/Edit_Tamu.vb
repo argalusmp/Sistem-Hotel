@@ -9,9 +9,9 @@
         TxtNamaTamu.Text = Tamu.DataTamu.GSNama
         RtbAlamat.Text = Tamu.DataTamu.GSAlamat
 
-        If String.Compare(Tamu.DataTamu.GSJenisKelamin, "Perempuan") = 0 Then
+        If String.Compare(Tamu.DataTamu.GSJenisKelamin, "Perempuan") Then
             RbPerempuan.Checked = True
-        ElseIf String.Compare(Tamu.DataTamu.GSJenisKelamin, "Laki-laki") = 0 Then
+        ElseIf String.Compare(Tamu.DataTamu.GSJenisKelamin, "Laki-laki") Then
             RbLaki.Checked = True
         End If
     End Sub
@@ -44,9 +44,9 @@
         Tamu.DataTamu.GSAlamat = RtbAlamat.Text.ToString()
 
         If RbPerempuan.Checked Then
-            Tamu.DataTamu.GSJenisKelamin = True
+            Tamu.DataTamu.GSJenisKelamin = "Perempuan"
         ElseIf RbLaki.Checked Then
-            Tamu.DataTamu.GSJenisKelamin = True
+            Tamu.DataTamu.GSJenisKelamin = "Laki-Laki"
         End If
 
         Tamu.DataTamu.UpdateDataTamuByIDDatabase(Tamu.selectedTableTamu,

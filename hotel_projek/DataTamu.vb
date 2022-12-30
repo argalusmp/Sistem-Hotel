@@ -120,7 +120,7 @@ Public Class DataTamu
                         "nik='" & nik & "', " &
                         "nama='" & nama & "', " &
                         "alamat='" & alamat & "', " &
-                        "jenis_kelamin='" & jenis_kelamin & "', " &
+                        "jenis_kelamin='" & jenis_kelamin & "' " &
                         "WHERE id_tamu='" & ID & "'"
 
             sqlCommand = New MySqlCommand(sqlQuery, dbConn)
