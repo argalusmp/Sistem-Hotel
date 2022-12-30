@@ -31,7 +31,7 @@ Public Class BookingBook
                                   booking_kamar.check_in AS 'Check-In', 
                                   booking_kamar.check_out AS 'Check-Out', 
                                   booking_kamar.total_bayar AS 'Price',
-                                  booking_kamar.status AS 'Status'
+                                  booking_kamar.status AS 'Bayar'
                                   FROM booking_kamar
                                   INNER JOIN tamu ON booking_kamar.id_tamu = tamu.id_tamu
                                   INNER JOIN kamar ON booking_kamar.id_kamar = kamar.id_kamar"
