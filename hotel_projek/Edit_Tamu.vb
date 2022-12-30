@@ -44,9 +44,9 @@
         Tamu.DataTamu.GSAlamat = RtbAlamat.Text.ToString()
 
         If RbPerempuan.Checked Then
-            Tamu.DataTamu.GSJenisKelamin = True
+            Tamu.DataTamu.GSJenisKelamin = "Perempuan"
         ElseIf RbLaki.Checked Then
-            Tamu.DataTamu.GSJenisKelamin = True
+            Tamu.DataTamu.GSJenisKelamin = "Laki-laki"
         End If
 
         Tamu.DataTamu.UpdateDataTamuByIDDatabase(Tamu.selectedTableTamu,
@@ -54,7 +54,7 @@
                                                  Tamu.DataTamu.GSNama,
                                                  Tamu.DataTamu.GSAlamat,
                                                  Tamu.DataTamu.GSJenisKelamin)
-        'Tamu.Show()
+        Tamu.Show()
         Me.Close()
 
     End Sub
