@@ -111,14 +111,17 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+
     <Compile Include="DataJenisHotel.vb" />
     <Compile Include="DataTamu.vb" />
     <Compile Include="Edit_JenisKamar.Designer.vb">
       <DependentUpon>Edit_JenisKamar.vb</DependentUpon>
+
     </Compile>
-    <Compile Include="Edit_JenisKamar.vb">
+    <Compile Include="Edit_Kamar.vb">
       <SubType>Form</SubType>
     </Compile>
+
     <Compile Include="Edit_Tamu.Designer.vb">
       <DependentUpon>Edit_Tamu.vb</DependentUpon>
     </Compile>
@@ -127,10 +130,12 @@
     </Compile>
     <Compile Include="Hapus_JenisKamar.Designer.vb">
       <DependentUpon>Hapus_JenisKamar.vb</DependentUpon>
+
     </Compile>
-    <Compile Include="Hapus_JenisKamar.vb">
+    <Compile Include="Kamar.vb">
       <SubType>Form</SubType>
     </Compile>
+
     <Compile Include="Hapus_Tamu.Designer.vb">
       <DependentUpon>Hapus_Tamu.vb</DependentUpon>
     </Compile>
@@ -139,8 +144,9 @@
     </Compile>
     <Compile Include="Jenis_Kamar.Designer.vb">
       <DependentUpon>Jenis_Kamar.vb</DependentUpon>
+
     </Compile>
-    <Compile Include="Jenis_Kamar.vb">
+    <Compile Include="Hapus_Kamar.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -159,10 +165,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Tambah_JenisKamar.Designer.vb">
-      <DependentUpon>Tambah_JenisKamar.vb</DependentUpon>
+    <Compile Include="Tambah_Kamar.Designer.vb">
+      <DependentUpon>Tambah_Kamar.vb</DependentUpon>
     </Compile>
-    <Compile Include="Tambah_JenisKamar.vb">
+    <Compile Include="Tambah_Kamar.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Tambah_Tamu.Designer.vb">
@@ -179,9 +185,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Edit_JenisKamar.resx">
-      <DependentUpon>Edit_JenisKamar.vb</DependentUpon>
+    <EmbeddedResource Include="Edit_Kamar.resx">
+      <DependentUpon>Edit_Kamar.vb</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="Edit_Tamu.resx">
       <DependentUpon>Edit_Tamu.vb</DependentUpon>
     </EmbeddedResource>
@@ -193,6 +200,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Jenis_Kamar.resx">
       <DependentUpon>Jenis_Kamar.vb</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -200,8 +208,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tambah_JenisKamar.resx">
-      <DependentUpon>Tambah_JenisKamar.vb</DependentUpon>
+    <EmbeddedResource Include="Tambah_Kamar.resx">
+      <DependentUpon>Tambah_Kamar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tambah_Tamu.resx">
       <DependentUpon>Tambah_Tamu.vb</DependentUpon>
