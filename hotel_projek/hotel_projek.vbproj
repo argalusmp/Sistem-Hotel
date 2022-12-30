@@ -111,40 +111,21 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-
-    <Compile Include="DataJenisHotel.vb" />
-    <Compile Include="DataTamu.vb" />
-    <Compile Include="Edit_JenisKamar.Designer.vb">
-      <DependentUpon>Edit_JenisKamar.vb</DependentUpon>
-
+    <Compile Include="Class_Kamar.vb" />
+    <Compile Include="Edit_Kamar.Designer.vb">
+      <DependentUpon>Edit_Kamar.vb</DependentUpon>
     </Compile>
     <Compile Include="Edit_Kamar.vb">
       <SubType>Form</SubType>
     </Compile>
-
-    <Compile Include="Edit_Tamu.Designer.vb">
-      <DependentUpon>Edit_Tamu.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Edit_Tamu.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Hapus_JenisKamar.Designer.vb">
-      <DependentUpon>Hapus_JenisKamar.vb</DependentUpon>
-
+    <Compile Include="Kamar.Designer.vb">
+      <DependentUpon>Kamar.vb</DependentUpon>
     </Compile>
     <Compile Include="Kamar.vb">
       <SubType>Form</SubType>
     </Compile>
-
-    <Compile Include="Hapus_Tamu.Designer.vb">
-      <DependentUpon>Hapus_Tamu.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Hapus_Tamu.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Jenis_Kamar.Designer.vb">
-      <DependentUpon>Jenis_Kamar.vb</DependentUpon>
-
+    <Compile Include="Hapus_Kamar.Designer.vb">
+      <DependentUpon>Hapus_Kamar.vb</DependentUpon>
     </Compile>
     <Compile Include="Hapus_Kamar.vb">
       <SubType>Form</SubType>
@@ -171,36 +152,16 @@
     <Compile Include="Tambah_Kamar.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tambah_Tamu.Designer.vb">
-      <DependentUpon>Tambah_Tamu.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Tambah_Tamu.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tamu.Designer.vb">
-      <DependentUpon>Tamu.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Tamu.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Edit_Kamar.resx">
       <DependentUpon>Edit_Kamar.vb</DependentUpon>
     </EmbeddedResource>
-
-    <EmbeddedResource Include="Edit_Tamu.resx">
-      <DependentUpon>Edit_Tamu.vb</DependentUpon>
+    <EmbeddedResource Include="Kamar.resx">
+      <DependentUpon>Kamar.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Hapus_JenisKamar.resx">
-      <DependentUpon>Hapus_JenisKamar.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Hapus_Tamu.resx">
-      <DependentUpon>Hapus_Tamu.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Jenis_Kamar.resx">
-      <DependentUpon>Jenis_Kamar.vb</DependentUpon>
-
+    <EmbeddedResource Include="Hapus_Kamar.resx">
+      <DependentUpon>Hapus_Kamar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -210,12 +171,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tambah_Kamar.resx">
       <DependentUpon>Tambah_Kamar.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Tambah_Tamu.resx">
-      <DependentUpon>Tambah_Tamu.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Tamu.resx">
-      <DependentUpon>Tamu.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
