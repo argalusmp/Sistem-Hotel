@@ -55,4 +55,24 @@
         Dim formHapus = New Hapus_Kamar()
         formHapus.Show()
     End Sub
+
+    Private Sub JenisKamarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles JenisKamarToolStripMenuItem.Click
+        Dim formJenisKamar = New Jenis_Kamar()
+        formJenisKamar.Show()
+    End Sub
+
+    Private Sub TamuToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TamuToolStripMenuItem.Click
+        Dim formTamu = New Tamu()
+        formTamu.Show()
+    End Sub
+
+    Private Sub BookingKamarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BookingKamarToolStripMenuItem.Click
+        Dim formBooking = New Booking()
+        formBooking.Show()
+    End Sub
+
+    Private Sub CheckOutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CheckOutToolStripMenuItem.Click
+        Dim formCheckOut = New CheckOut()
+        formCheckOut.Show()
+    End Sub
 End Class

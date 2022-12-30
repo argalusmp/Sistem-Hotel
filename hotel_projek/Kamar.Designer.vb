@@ -22,14 +22,13 @@ Partial Class Kamar
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.MenuBar = New System.Windows.Forms.MenuStrip()
         Me.JenisKamarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.KamarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TamuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BookingKamarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CheckOutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SignOutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BtnHapus = New System.Windows.Forms.Button()
         Me.BtnEdit = New System.Windows.Forms.Button()
         Me.BtnTambah = New System.Windows.Forms.Button()
@@ -45,7 +44,7 @@ Partial Class Kamar
         'MenuBar
         '
         Me.MenuBar.BackColor = System.Drawing.Color.Pink
-        Me.MenuBar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.JenisKamarToolStripMenuItem, Me.KamarToolStripMenuItem, Me.TamuToolStripMenuItem, Me.BookingKamarToolStripMenuItem, Me.CheckOutToolStripMenuItem, Me.SignOutToolStripMenuItem})
+        Me.MenuBar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.JenisKamarToolStripMenuItem, Me.KamarToolStripMenuItem, Me.TamuToolStripMenuItem, Me.BookingKamarToolStripMenuItem, Me.CheckOutToolStripMenuItem})
         Me.MenuBar.Location = New System.Drawing.Point(0, 0)
         Me.MenuBar.Name = "MenuBar"
         Me.MenuBar.Size = New System.Drawing.Size(800, 24)
@@ -81,12 +80,6 @@ Partial Class Kamar
         Me.CheckOutToolStripMenuItem.Name = "CheckOutToolStripMenuItem"
         Me.CheckOutToolStripMenuItem.Size = New System.Drawing.Size(72, 20)
         Me.CheckOutToolStripMenuItem.Text = "CheckOut"
-        '
-        'SignOutToolStripMenuItem
-        '
-        Me.SignOutToolStripMenuItem.Name = "SignOutToolStripMenuItem"
-        Me.SignOutToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
-        Me.SignOutToolStripMenuItem.Text = "SignOut"
         '
         'BtnHapus
         '
@@ -154,14 +147,14 @@ Partial Class Kamar
         Me.DataGridKamar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridKamar.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
         Me.DataGridKamar.BackgroundColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridKamar.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridKamar.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridKamar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridKamar.GridColor = System.Drawing.Color.Pink
         Me.DataGridKamar.Location = New System.Drawing.Point(16, 65)
@@ -212,7 +205,6 @@ Partial Class Kamar
     Friend WithEvents TamuToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BookingKamarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CheckOutToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents SignOutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridKamar As DataGridView
