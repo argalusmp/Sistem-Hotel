@@ -72,29 +72,24 @@ Public Class BookingBook
     End Function
 
     Public Function getNamaTamu() As DataTable
-        'Dim result As New DataTable
+        Dim result As New DataTable
 
-        'dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
-        '    + "password=" + password + ";" + "database =" + database
-        'dbConn.Open()
-        'sqlCommand.Connection = dbConn
-        'sqlCommand.CommandText = "SELECT nama FROM tamu"
+        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
+            + "password=" + password + ";" + "database =" + database
+        dbConn.Open()
+        sqlCommand.Connection = dbConn
+        sqlCommand.CommandText = "SELECT nama FROM tamu"
 
-        'sqlRead = sqlCommand.ExecuteReader
-        'While (sqlRead)
-        '{
-        'Tambah_Booking.CBNamaTamu.Items.Add(sqlRead["instructorLN"].ToString());
-        '}
-        'Tambah_Booking.CBNamaTamu.Items.Add(sqlRead["instructorLN"].ToString());
+        sqlRead = sqlCommand.ExecuteReader
 
-
-        'result.Load(sqlRead)
-        'sqlRead.Close()
-        'dbConn.Close()
-        'Return result
+        result.Load(sqlRead)
+        sqlRead.Close()
+        dbConn.Close()
+        Return Result
 
 
     End Function
+
 
 
 

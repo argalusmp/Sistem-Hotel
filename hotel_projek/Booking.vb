@@ -1,6 +1,8 @@
 ﻿Public Class Booking
 
     Public Shared dataBooking As BookingBook
+    Public Shared dataTamu As DataTamu
+
     Public Shared selectedtablebooking
     Public Shared selectedtablebookingnama
 
@@ -11,6 +13,7 @@
 
         ' Add any initialization after the InitializeComponent() call.
         dataBooking = New BookingBook
+        dataTamu = New DataTamu
 
         ReloadDataTableDatabase()
     End Sub

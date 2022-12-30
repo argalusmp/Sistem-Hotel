@@ -10,7 +10,16 @@
 
 
     Private Sub ReloadDataName()
-        CBNamaTamu.DataSource = Booking.dataBooking.getNamaTamu()
+        ' Contoh cara menambahkan data di cb menggunakan database
+        CBNamaTamu.DataSource = Booking.dataTamu.GetDataTamuDatabase()
+        CBNamaTamu.DisplayMember = "Nama"
+
+        'CBNamaTamu.DataSource = Booking.dataBooking.getNamaTamu()
+        'CBNamaTamu.DisplayMember = "nama"
+
+        'CBNamaTamu.DataSource = Booking.dataTamu.GetDataTamuDatabase()
+        'CBNamaTamu.DisplayMember = "Nama"
+
 
     End Sub
 

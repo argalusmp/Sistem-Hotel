@@ -41,11 +41,11 @@ Partial Class Booking
         '
         'BtnAddBook
         '
-        Me.BtnAddBook.Location = New System.Drawing.Point(246, 351)
+        Me.BtnAddBook.Location = New System.Drawing.Point(209, 351)
         Me.BtnAddBook.Name = "BtnAddBook"
-        Me.BtnAddBook.Size = New System.Drawing.Size(113, 35)
+        Me.BtnAddBook.Size = New System.Drawing.Size(150, 35)
         Me.BtnAddBook.TabIndex = 1
-        Me.BtnAddBook.Text = "7"
+        Me.BtnAddBook.Text = "Tambah Booking"
         Me.BtnAddBook.UseVisualStyleBackColor = True
         '
         'BtnRemoveBook
