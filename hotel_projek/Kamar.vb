@@ -48,11 +48,27 @@
     Private Sub KamarToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles KamarToolStripMenuItem.Click
         Dim formkamar = New Kamar()
         formkamar.Show()
-        Me.Close()
+        'Me.Hide()
     End Sub
 
     Private Sub BtnHapus_Click(sender As Object, e As EventArgs) Handles BtnHapus.Click
         Dim formHapus = New Hapus_Kamar()
         formHapus.Show()
+    End Sub
+
+    Private Sub JenisKamarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles JenisKamarToolStripMenuItem.Click
+        Dim jenisKamar = New Jenis_Kamar()
+        jenisKamar.Show()
+        'Me.Hide()
+    End Sub
+
+    Private Sub TamuToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TamuToolStripMenuItem.Click
+        Tamu.Show()
+        'Me.Hide()
+    End Sub
+
+    Private Sub BookingKamarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BookingKamarToolStripMenuItem.Click
+        Booking.Show()
+        'Me.Hide()
     End Sub
 End Class
