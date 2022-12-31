@@ -17,8 +17,8 @@
         'CBNamaTamu.DataSource = Booking.dataBooking.getNamaTamu()
         'CBNamaTamu.DisplayMember = "nama"
 
-        'CBNamaTamu.DataSource = Booking.dataTamu.GetDataTamuDatabase()
-        'CBNamaTamu.DisplayMember = "Nama"
+        CBNamaKamar.DataSource = Booking.dataKamar.GetDataKamarDatabase()
+        CBNamaKamar.DisplayMember = "Nama Kamar"
 
 
     End Sub
