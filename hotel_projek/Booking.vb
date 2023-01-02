@@ -34,4 +34,16 @@
         Dim tambahBooking = New Tambah_Booking
         tambahBooking.Show()
     End Sub
+
+    Private Sub BtnEditBook_Click(sender As Object, e As EventArgs) Handles BtnEditBook.Click
+        Dim selectedBooking As List(Of String) = dataBooking.GetDataBookingByIDDatabase(selectedtablebooking)
+
+        dataBooking.GSNamaTamu = selectedBooking(1)
+        dataBooking.GSNamaKamar = selectedBooking(3)
+        dataBooking.GSCheckIn = selectedBooking(4)
+        dataBooking.GSCheckOut = selectedBooking(5)
+
+        Dim formEdit = New Edit_Booking()
+        formEdit.Show()
+    End Sub
 End Class
