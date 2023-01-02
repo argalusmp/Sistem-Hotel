@@ -4,6 +4,12 @@ Imports MySql.Data.MySqlClient
 
 Public Class BookingBook
 
+    Private nama_tamu As String
+    Private nama_kamar As String
+    Private check_in As Date
+    Private check_out As Date
+    Private total_bayar As Double
+    Private status As Boolean
 
     Public Shared dbConn As New MySqlConnection
     Public Shared sqlCommand As New MySqlCommand
@@ -45,30 +51,41 @@ Public Class BookingBook
         Return result
     End Function
 
-    Public Function AddDataBookingDatabase()
+    Public Function AddDataBookingDatabase(nama_tamu As String, nama_kamar As String, check_in As Date, check_out As Date)
 
-        'dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" + "password=" + password + ";" + "database =" + database
+        Dim status = 0
 
-        'Try
-        '    dbConn.Open()
-        '    sqlCommand.Connection = dbConn
-        '    sqlQuery = "INSERT INTO booking_kamar(jenis_kamar, harga_permalam) VALUE('" _
-        '            & Jenis_Kamar & " ', '" _
-        '            & harga_permalam & "')"
-
-        '    sqlCommand = New MySqlCommand(sqlQuery, dbConn)
-        '    sqlRead = sqlCommand.ExecuteReader
-        '    dbConn.Close()
-
-        '    sqlRead.Close()
-        '    dbConn.Close()
+        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" + "password=" + password + ";" + "database =" + database
 
 
-        'Catch ex As Exception
-        '    Return ex.Message
-        'Finally
-        '    dbConn.Dispose()
-        'End Try
+
+        Try
+            dbConn.Open()
+            sqlCommand.Connection = dbConn
+            Dim harga = "SELECT harga_permalam FROM jenis_kamar INNER JOIN kamar ON jenis_kamar.id_jenis_kamar = kamar.id_jenis_kamar INNER JOIN booking_kamar ON kamar.id_kamar = booking_kamar.id_kamar WHERE kamar.nama_kamar = '" & nama_kamar & "'"
+            Dim lama_menginap = "SELECT DATEDIFF('" & check_out & "'" & "', ' " & check_in & "') FROM booking_kamar"
+            Dim jumlah_BAYAR = harga * lama_menginap
+            sqlQuery = "INSERT INTO booking_kamar(id_tamu, id_kamar,check_in,check_out,total_bayar,status) VALUE('" _
+                    & "SELECT id_tamu FROM tamu WHERE nama = '" & nama_tamu & "'" & " ', '" _
+                    & "SELECT id_kamar FROM kamar WHERE nama_kamar = '" & nama_kamar & "'" & " ', '" _
+                    & check_in & " ', '" _
+                    & check_out & " ', '" _
+                    & jumlah_BAYAR & " ', '" _
+                    & status & "')"
+
+            sqlCommand = New MySqlCommand(sqlQuery, dbConn)
+            sqlRead = sqlCommand.ExecuteReader
+            dbConn.Close()
+
+            sqlRead.Close()
+            dbConn.Close()
+
+
+        Catch ex As Exception
+            Return ex.Message
+        Finally
+            dbConn.Dispose()
+        End Try
     End Function
 
     Public Function getNamaTamu() As DataTable
@@ -90,6 +107,60 @@ Public Class BookingBook
 
     End Function
 
+
+    Public Property GSNamaKamar() As String
+        Get
+            Return nama_kamar
+        End Get
+        Set(value As String)
+            nama_kamar = value
+        End Set
+    End Property
+
+    Public Property GSNamaTamu() As String
+        Get
+            Return nama_tamu
+        End Get
+        Set(value As String)
+            nama_tamu = value
+        End Set
+    End Property
+
+    Public Property GSCheckIn() As Date
+        Get
+            Return check_in
+        End Get
+        Set(value As Date)
+            check_in = value
+        End Set
+    End Property
+
+    Public Property GSCheckOut() As Date
+        Get
+            Return check_out
+        End Get
+        Set(value As Date)
+            check_out = value
+        End Set
+    End Property
+
+    Public Property GSTotalBayar() As Double
+        Get
+            Return total_bayar
+        End Get
+        Set(value As Double)
+            total_bayar = value
+        End Set
+    End Property
+
+    Public Property GSStatus() As Boolean
+        Get
+            Return status
+        End Get
+        Set(value As Boolean)
+            status = value
+        End Set
+    End Property
 
 
 

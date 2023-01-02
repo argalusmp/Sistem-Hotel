@@ -26,4 +26,18 @@
     Private Sub Tambah_Booking_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         ReloadDataName()
     End Sub
+
+    Private Sub BtnTambahBooking_Click(sender As Object, e As EventArgs) Handles BtnTambahBooking.Click
+
+
+        Booking.dataBooking.GSNamaKamar = CBNamaKamar.Text
+        Booking.dataBooking.GSNamaTamu = CBNamaTamu.Text
+        Booking.dataBooking.GSCheckIn = DateCheckIn.Value.ToString("dd/MM/yyyy")
+        Booking.dataBooking.GSCheckOut = DateCheckOut.Value.ToString("dd/MM/yyyy")
+
+
+        Booking.dataBooking.AddDataBookingDatabase(Booking.dataBooking.GSNamaTamu, Booking.dataBooking.GSNamaKamar, Booking.dataBooking.GSCheckIn, Booking.dataBooking.GSCheckOut)
+
+        Me.Hide()
+    End Sub
 End Class
