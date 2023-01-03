@@ -136,7 +136,7 @@ Public Class BookingBook
             result.Add(sqlRead.GetString(3).ToString())
             result.Add(sqlRead.GetDateTime(4).ToString())
             result.Add(sqlRead.GetDateTime(5).ToString())
-            result.Add(sqlRead.GetInt32(6).ToString())
+            'result.Add(sqlRead.GetInt32(6).ToString())
             result.Add(sqlRead.GetBoolean(7))
 
 
@@ -161,8 +161,8 @@ Public Class BookingBook
             Dim harga = "SELECT harga_permalam FROM jenis_kamar INNER JOIN kamar ON jenis_kamar.id_jenis_kamar = kamar.id_jenis_kamar INNER JOIN booking_kamar ON kamar.id_kamar = booking_kamar.id_kamar WHERE kamar.nama_kamar = '" & nama_kamar & "'"
             Dim lama_menginap = "SELECT DATEDIFF('" & check_out & "'" & "', ' " & check_in & "') FROM booking_kamar"
             Dim jumlah_BAYAR = harga * lama_menginap
-            sqlQuery = "UPDATE booking_kamar SET id_tamu= SELECT id_tamu FROM tamu WHERE nama = '" & nama_tamu & "'," &
-                        "id_kamar= SELECT id_kamar FROM kamar WHERE nama_kamar = '" & nama_kamar & "'," &
+            sqlQuery = "UPDATE booking_kamar SET id_tamu = (SELECT id_tamu FROM tamu WHERE nama = '" & nama_tamu & "'), " &
+                        "id_kamar= (SELECT id_kamar FROM kamar WHERE nama_kamar = '" & nama_kamar & "'), " &
                         "check_in= " & check_in & ", " &
                         "check_out= " & check_out & " " &
                         "WHERE id_booking = " & id_booking & ";"

@@ -5,7 +5,7 @@
     Public Shared dataKamar As Class_Kamar
 
 
-    Public Shared selectedtablebooking
+    Public Shared selectedtablebooking As Integer
     Public Shared selectedtablebookingnama
 
     Public Sub New()
@@ -45,5 +45,14 @@
 
         Dim formEdit = New Edit_Booking()
         formEdit.Show()
+    End Sub
+
+    Private Sub DataGridViewBooking_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewBooking.CellClick
+        Dim index As Integer = e.RowIndex
+        Dim selectedRow As DataGridViewRow
+        selectedRow = DataGridViewBooking.Rows(index)
+
+        selectedtablebooking = selectedRow.Cells(0).Value
+        selectedtablebookingnama = selectedRow.Cells(2).Value
     End Sub
 End Class
