@@ -66,8 +66,8 @@ Public Class BookingBook
             Dim lama_menginap = "SELECT DATEDIFF('" & check_out & "'" & "', ' " & check_in & "') FROM booking_kamar"
             Dim jumlah_BAYAR = harga * lama_menginap
             sqlQuery = "INSERT INTO booking_kamar(id_tamu, id_kamar,check_in,check_out,total_bayar,status) VALUE('" _
-                    & "SELECT id_tamu FROM tamu WHERE nama = '" & nama_tamu & "'" & " ', '" _
-                    & "SELECT id_kamar FROM kamar WHERE nama_kamar = '" & nama_kamar & "'" & " ', '" _
+                    & nama_tamu  & " ', '" _
+                    & nama_kamar  & " ', '" _
                     & check_in & " ', '" _
                     & check_out & " ', '" _
                     & jumlah_BAYAR & " ', '" _
