@@ -107,6 +107,79 @@ Public Class BookingBook
 
     End Function
 
+    Public Function GetDataBookingByIDDatabase(id_booking As Integer) As List(Of String)
+        Dim result As New List(Of String)
+
+        dbConn.ConnectionString = "server =" + server + ";" + "user id =" + username + ";" _
+            + "password =" + password + ";" + "database =" + database
+        dbConn.Open()
+        sqlCommand.Connection = dbConn
+        sqlCommand.CommandText = "SELECT booking_kamar.id_tamu AS 'ID Tamu', 
+                                  tamu.nama AS 'Nama Tamu',
+                                  booking_kamar.id_kamar AS 'ID Kamar', 
+                                  kamar.nama_kamar AS 'Nama Kamar',
+                                  booking_kamar.check_in AS 'Check-In', 
+                                  booking_kamar.check_out AS 'Check-Out', 
+                                  booking_kamar.total_bayar AS 'Price',
+                                  booking_kamar.status AS 'Bayar'
+                                  FROM booking_kamar 
+                                  INNER JOIN tamu ON booking_kamar.id_tamu = tamu.id_tamu
+                                  INNER JOIN kamar ON booking_kamar.id_kamar = kamar.id_kamar
+                                  WHERE booking_kamar.id_booking=" & id_booking & ";"
+
+        sqlRead = sqlCommand.ExecuteReader
+
+        While sqlRead.Read
+            result.Add(sqlRead.GetInt32(0).ToString())
+            result.Add(sqlRead.GetString(1).ToString())
+            result.Add(sqlRead.GetInt32(2).ToString())
+            result.Add(sqlRead.GetString(3).ToString())
+            result.Add(sqlRead.GetDateTime(4).ToString())
+            result.Add(sqlRead.GetDateTime(5).ToString())
+            'result.Add(sqlRead.GetInt32(6).ToString())
+            result.Add(sqlRead.GetBoolean(7))
+
+
+        End While
+
+
+
+        sqlRead.Close()
+        dbConn.Close()
+        Return result
+
+    End Function
+
+    Public Function UpdateDataBookingByIDDatabase(id_booking As Integer, nama_tamu As String, nama_kamar As String, check_in As Date, check_out As Date)
+
+        dbConn.ConnectionString = "server =" + server + ";" + "user id =" + username + ";" _
+        + "password =" + password + ";" + "database =" + database
+
+        Try
+            dbConn.Open()
+            sqlCommand.Connection = dbConn
+            Dim harga = "SELECT harga_permalam FROM jenis_kamar INNER JOIN kamar ON jenis_kamar.id_jenis_kamar = kamar.id_jenis_kamar INNER JOIN booking_kamar ON kamar.id_kamar = booking_kamar.id_kamar WHERE kamar.nama_kamar = '" & nama_kamar & "'"
+            Dim lama_menginap = "SELECT DATEDIFF('" & check_out & "'" & "', ' " & check_in & "') FROM booking_kamar"
+            Dim jumlah_BAYAR = harga * lama_menginap
+            sqlQuery = "UPDATE booking_kamar SET id_tamu = (SELECT id_tamu FROM tamu WHERE nama = '" & nama_tamu & "'), " &
+                        "id_kamar= (SELECT id_kamar FROM kamar WHERE nama_kamar = '" & nama_kamar & "'), " &
+                        "check_in= " & check_in & ", " &
+                        "check_out= " & check_out & " " &
+                        "WHERE id_booking = " & id_booking & ";"
+
+            sqlCommand = New MySqlCommand(sqlQuery, dbConn)
+            sqlRead = sqlCommand.ExecuteReader
+            dbConn.Close()
+
+            sqlRead.Close()
+            dbConn.Close()
+        Catch ex As Exception
+            Return ex.Message
+        Finally
+            dbConn.Dispose()
+        End Try
+
+    End Function
 
     Public Property GSNamaKamar() As String
         Get

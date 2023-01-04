@@ -5,7 +5,7 @@
     Public Shared dataKamar As Class_Kamar
 
 
-    Public Shared selectedtablebooking
+    Public Shared selectedtablebooking As Integer
     Public Shared selectedtablebookingnama
 
     Public Sub New()
@@ -33,5 +33,26 @@
     Private Sub BtnAddBook_Click(sender As Object, e As EventArgs) Handles BtnAddBook.Click
         Dim tambahBooking = New Tambah_Booking
         tambahBooking.Show()
+    End Sub
+
+    Private Sub BtnEditBook_Click(sender As Object, e As EventArgs) Handles BtnEditBook.Click
+        Dim selectedBooking As List(Of String) = dataBooking.GetDataBookingByIDDatabase(selectedtablebooking)
+
+        dataBooking.GSNamaTamu = selectedBooking(1)
+        dataBooking.GSNamaKamar = selectedBooking(3)
+        dataBooking.GSCheckIn = selectedBooking(4)
+        dataBooking.GSCheckOut = selectedBooking(5)
+
+        Dim formEdit = New Edit_Booking()
+        formEdit.Show()
+    End Sub
+
+    Private Sub DataGridViewBooking_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewBooking.CellClick
+        Dim index As Integer = e.RowIndex
+        Dim selectedRow As DataGridViewRow
+        selectedRow = DataGridViewBooking.Rows(index)
+
+        selectedtablebooking = selectedRow.Cells(0).Value
+        selectedtablebookingnama = selectedRow.Cells(2).Value
     End Sub
 End Class

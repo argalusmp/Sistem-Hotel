@@ -32,49 +32,54 @@ Partial Class Booking
         'DataGridViewBooking
         '
         Me.DataGridViewBooking.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewBooking.Location = New System.Drawing.Point(59, 12)
+        Me.DataGridViewBooking.Location = New System.Drawing.Point(44, 10)
+        Me.DataGridViewBooking.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridViewBooking.Name = "DataGridViewBooking"
         Me.DataGridViewBooking.RowHeadersWidth = 51
         Me.DataGridViewBooking.RowTemplate.Height = 24
-        Me.DataGridViewBooking.Size = New System.Drawing.Size(1185, 297)
+        Me.DataGridViewBooking.Size = New System.Drawing.Size(889, 241)
         Me.DataGridViewBooking.TabIndex = 0
         '
         'BtnAddBook
         '
-        Me.BtnAddBook.Location = New System.Drawing.Point(209, 351)
+        Me.BtnAddBook.Location = New System.Drawing.Point(157, 285)
+        Me.BtnAddBook.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnAddBook.Name = "BtnAddBook"
-        Me.BtnAddBook.Size = New System.Drawing.Size(150, 35)
+        Me.BtnAddBook.Size = New System.Drawing.Size(112, 28)
         Me.BtnAddBook.TabIndex = 1
         Me.BtnAddBook.Text = "Tambah Booking"
         Me.BtnAddBook.UseVisualStyleBackColor = True
         '
         'BtnRemoveBook
         '
-        Me.BtnRemoveBook.Location = New System.Drawing.Point(473, 351)
+        Me.BtnRemoveBook.Location = New System.Drawing.Point(355, 285)
+        Me.BtnRemoveBook.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnRemoveBook.Name = "BtnRemoveBook"
-        Me.BtnRemoveBook.Size = New System.Drawing.Size(90, 35)
+        Me.BtnRemoveBook.Size = New System.Drawing.Size(68, 28)
         Me.BtnRemoveBook.TabIndex = 2
         Me.BtnRemoveBook.Text = "Remove"
         Me.BtnRemoveBook.UseVisualStyleBackColor = True
         '
         'BtnEditBook
         '
-        Me.BtnEditBook.Location = New System.Drawing.Point(365, 351)
+        Me.BtnEditBook.Location = New System.Drawing.Point(274, 285)
+        Me.BtnEditBook.Margin = New System.Windows.Forms.Padding(2)
         Me.BtnEditBook.Name = "BtnEditBook"
-        Me.BtnEditBook.Size = New System.Drawing.Size(91, 35)
+        Me.BtnEditBook.Size = New System.Drawing.Size(68, 28)
         Me.BtnEditBook.TabIndex = 3
         Me.BtnEditBook.Text = "Edit"
         Me.BtnEditBook.UseVisualStyleBackColor = True
         '
         'Booking
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1285, 450)
+        Me.ClientSize = New System.Drawing.Size(964, 366)
         Me.Controls.Add(Me.BtnEditBook)
         Me.Controls.Add(Me.BtnRemoveBook)
         Me.Controls.Add(Me.BtnAddBook)
         Me.Controls.Add(Me.DataGridViewBooking)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Booking"
         Me.Text = "Booking"
         CType(Me.DataGridViewBooking, System.ComponentModel.ISupportInitialize).EndInit()

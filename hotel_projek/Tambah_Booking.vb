@@ -43,4 +43,40 @@
 
         Me.Hide()
     End Sub
+
+    Private Sub CBNamaTamu_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBNamaTamu.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+
+    End Sub
+
+    Private Sub CBNamaKamar_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBNamaKamar.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub DateCheckIn_ValueChanged(sender As Object, e As EventArgs) Handles DateCheckIn.ValueChanged
+
+    End Sub
+
+    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+
+    End Sub
+
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+
+    End Sub
+
+    Private Sub DateCheckOut_ValueChanged(sender As Object, e As EventArgs) Handles DateCheckOut.ValueChanged
+
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
 End Class
