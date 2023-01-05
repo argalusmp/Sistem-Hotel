@@ -6,6 +6,11 @@
 
         ' Add any initialization after the InitializeComponent() call.
         ReloadDataName()
+        DateCheckIn.Format = DateTimePickerFormat.Custom
+        DateCheckIn.CustomFormat = "yyyy-MM-dd"
+        DateCheckOut.Format = DateTimePickerFormat.Custom
+        DateCheckOut.CustomFormat = "yyyy-MM-dd"
+
     End Sub
 
 
@@ -16,13 +21,15 @@
         CBNamaTamu.ValueMember = "ID Tamu"
 
 
-        'CBNamaTamu.DataSource = Booking.dataBooking.getNamaTamu()
-        'CBNamaTamu.DisplayMember = "nama"
 
         CBNamaKamar.DataSource = Booking.dataKamar.GetDataKamarDatabase()
         CBNamaKamar.DisplayMember = "Nama Kamar"
         CBNamaKamar.ValueMember = "ID Kamar"
 
+
+
+        'CBNamaTamu.DataSource = Booking.dataBooking.getNamaTamu()
+        'CBNamaTamu.DisplayMember = "nama"
 
     End Sub
 
@@ -32,11 +39,13 @@
 
     Private Sub BtnTambahBooking_Click(sender As Object, e As EventArgs) Handles BtnTambahBooking.Click
 
-
         Booking.dataBooking.GSNamaKamar = CBNamaKamar.SelectedValue
         Booking.dataBooking.GSNamaTamu = CBNamaTamu.SelectedValue
-        Booking.dataBooking.GSCheckIn = DateCheckIn.Value.ToString("dd/MM/yyyy")
-        Booking.dataBooking.GSCheckOut = DateCheckOut.Value.ToString("dd/MM/yyyy")
+
+        'Booking.dataBooking.GSNamaKamar = CBNamaKamar.Text
+        'Booking.dataBooking.GSNamaTamu = CBNamaTamu.Text
+        Booking.dataBooking.GSCheckIn = DateCheckIn.Value.ToString("yyyy-MM-dd")
+        Booking.dataBooking.GSCheckOut = DateCheckOut.Value.ToString("yyyy-MM-dd")
 
 
         Booking.dataBooking.AddDataBookingDatabase(Booking.dataBooking.GSNamaTamu, Booking.dataBooking.GSNamaKamar, Booking.dataBooking.GSCheckIn, Booking.dataBooking.GSCheckOut)

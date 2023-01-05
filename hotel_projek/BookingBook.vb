@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Diagnostics.Eventing
 Imports System.Text
 Imports MySql.Data.MySqlClient
 
@@ -15,6 +16,7 @@ Public Class BookingBook
     Public Shared sqlCommand As New MySqlCommand
     Public Shared sqlRead As MySqlDataReader
     Private sqlQuery As String
+
 
     Private server As String = "localhost"
     Private username As String = "root"
@@ -51,25 +53,66 @@ Public Class BookingBook
         Return result
     End Function
 
+    Public Function GetHargaBookingDatabase(nama_kamar As String)
+        Dim result As Integer
+
+        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
+            + "password=" + password + ";" + "database =" + database
+        dbConn.Open()
+        sqlCommand.Connection = dbConn
+        sqlCommand.CommandText = "SELECT harga_permalam FROM jenis_kamar INNER JOIN kamar ON jenis_kamar.id_jenis_kamar = kamar.id_jenis_kamar INNER JOIN booking_kamar ON kamar.id_kamar = booking_kamar.id_kamar WHERE kamar.nama_kamar = '" & nama_kamar & "'"
+
+
+        sqlRead = sqlCommand.ExecuteReader()
+        While sqlRead.Read()
+            result = sqlRead("harga_permalam")
+        End While
+        sqlRead.Close()
+        dbConn.Close()
+        Return result
+    End Function
+
+
+    Public Function GetDateBookingDatabase(check_in As Date, check_out As Date)
+        Dim result As Integer
+
+        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
+            + "password=" + password + ";" + "database =" + database
+        dbConn.Open()
+        sqlCommand.Connection = dbConn
+        sqlCommand.CommandText = "SELECT DATEDIFF('" & check_out.ToString("yyyy/MM/dd") & "', ' " & check_in.ToString("yyyy/MM/dd") & "')"
+
+
+        sqlRead = sqlCommand.ExecuteReader()
+        While sqlRead.Read()
+            result = sqlRead("DATEDIFF('" & check_out.ToString("yyyy/MM/dd") & "', ' " & check_in.ToString("yyyy/MM/dd") & "')")
+        End While
+        sqlRead.Close()
+        dbConn.Close()
+        Return result
+    End Function
+
+
+
     Public Function AddDataBookingDatabase(nama_tamu As String, nama_kamar As String, check_in As Date, check_out As Date)
 
-        Dim status = 0
+        Dim status = False
+        Dim harga = GetHargaBookingDatabase(nama_kamar)
+        Dim jumlah_hari = GetDateBookingDatabase(check_in, check_out)
 
         dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" + "password=" + password + ";" + "database =" + database
-
 
 
         Try
             dbConn.Open()
             sqlCommand.Connection = dbConn
-            Dim harga = "SELECT harga_permalam FROM jenis_kamar INNER JOIN kamar ON jenis_kamar.id_jenis_kamar = kamar.id_jenis_kamar INNER JOIN booking_kamar ON kamar.id_kamar = booking_kamar.id_kamar WHERE kamar.nama_kamar = '" & nama_kamar & "'"
-            Dim lama_menginap = "SELECT DATEDIFF('" & check_out & "'" & "', ' " & check_in & "') FROM booking_kamar"
-            Dim jumlah_BAYAR = harga * lama_menginap
+            Dim jumlah_BAYAR = harga * jumlah_hari
+
             sqlQuery = "INSERT INTO booking_kamar(id_tamu, id_kamar,check_in,check_out,total_bayar,status) VALUE('" _
-                    & nama_tamu  & " ', '" _
-                    & nama_kamar  & " ', '" _
-                    & check_in & " ', '" _
-                    & check_out & " ', '" _
+                    & nama_tamu & " ', '" _
+                    & nama_kamar & " ', '" _
+                    & check_in.ToString("yyyy/MM/dd") & " ', '" _
+                    & check_out.ToString("yyyy/MM/dd") & " ', '" _
                     & jumlah_BAYAR & " ', '" _
                     & status & "')"
 
@@ -102,7 +145,7 @@ Public Class BookingBook
         result.Load(sqlRead)
         sqlRead.Close()
         dbConn.Close()
-        Return Result
+        Return result
 
 
     End Function
