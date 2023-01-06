@@ -57,4 +57,14 @@
         selectedtablebooking = selectedRow.Cells(0).Value
         selectedtablebookingnama = selectedRow.Cells(2).Value
     End Sub
+
+    Private Sub BtnRemoveBook_Click(sender As Object, e As EventArgs) Handles BtnRemoveBook.Click
+        Dim selectedBooking As List(Of String) = Booking.dataBooking.GetDataBookingByIDDatabase(selectedtablebooking)
+
+        Booking.dataBooking.GSNamaTamu = selectedBooking(1)
+
+
+        Dim formHapus = New Hapus_Booking()
+        formHapus.Show()
+    End Sub
 End Class

@@ -13,4 +13,5 @@
         Tamu.DataTamu.DeleteDataTamuByIDDatabase(Tamu.selectedTableTamu)
         Me.Close()
     End Sub
+
 End Class
