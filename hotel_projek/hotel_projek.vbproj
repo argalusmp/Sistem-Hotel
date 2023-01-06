@@ -145,6 +145,12 @@
     <Compile Include="Edit_Tamu.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Hapus_Booking.Designer.vb">
+      <DependentUpon>Hapus_Booking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Hapus_Booking.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Hapus_JenisKamar.Designer.vb">
       <DependentUpon>Hapus_JenisKamar.vb</DependentUpon>
     </Compile>
@@ -250,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Edit_Tamu.resx">
       <DependentUpon>Edit_Tamu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hapus_Booking.resx">
+      <DependentUpon>Hapus_Booking.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Hapus_JenisKamar.resx">
       <DependentUpon>Hapus_JenisKamar.vb</DependentUpon>

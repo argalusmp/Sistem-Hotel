@@ -238,7 +238,7 @@ Public Class BookingBook
             dbConn.Open()
             sqlCommand.Connection = dbConn
             sqlQuery = "DELETE FROM booking_kamar " &
-                        "WHERE id_tamu='" & id_booking & "'"
+                        "WHERE id_booking='" & id_booking & "'"
 
             Debug.WriteLine(sqlQuery)
 

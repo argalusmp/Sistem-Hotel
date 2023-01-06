@@ -30,18 +30,18 @@ Partial Class Hapus_Booking
         '
         'BtnHapusBooking
         '
-        Me.BtnHapusBooking.Location = New System.Drawing.Point(212, 215)
+        Me.BtnHapusBooking.Location = New System.Drawing.Point(214, 216)
         Me.BtnHapusBooking.Name = "BtnHapusBooking"
         Me.BtnHapusBooking.Size = New System.Drawing.Size(114, 33)
         Me.BtnHapusBooking.TabIndex = 7
-        Me.BtnHapusBooking.Text = "Hapus"
+        Me.BtnHapusBooking.Text = "Hapus "
         Me.BtnHapusBooking.UseVisualStyleBackColor = True
         '
         'LblNamaTamu
         '
         Me.LblNamaTamu.AutoSize = True
         Me.LblNamaTamu.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblNamaTamu.Location = New System.Drawing.Point(218, 154)
+        Me.LblNamaTamu.Location = New System.Drawing.Point(220, 155)
         Me.LblNamaTamu.Name = "LblNamaTamu"
         Me.LblNamaTamu.Size = New System.Drawing.Size(100, 20)
         Me.LblNamaTamu.TabIndex = 6
@@ -51,17 +51,17 @@ Partial Class Hapus_Booking
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(126, 95)
+        Me.Label2.Location = New System.Drawing.Point(128, 96)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(297, 20)
+        Me.Label2.Size = New System.Drawing.Size(306, 20)
         Me.Label2.TabIndex = 5
-        Me.Label2.Text = "Apakah Anda ingin menhapus data ini?"
+        Me.Label2.Text = "Apakah Anda ingin menghapus data ini?"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(107, 23)
+        Me.Label1.Location = New System.Drawing.Point(109, 24)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(379, 29)
         Me.Label1.TabIndex = 4
@@ -71,7 +71,7 @@ Partial Class Hapus_Booking
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(576, 272)
+        Me.ClientSize = New System.Drawing.Size(561, 273)
         Me.Controls.Add(Me.BtnHapusBooking)
         Me.Controls.Add(Me.LblNamaTamu)
         Me.Controls.Add(Me.Label2)
