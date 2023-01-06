@@ -6,7 +6,7 @@ Public Class Class_Kamar
     Public Shared id_kamar As Integer
     Public Shared id_jenis_kamar As Integer
     Public Shared nama_kamar As String
-    Public Shared status As Boolean
+    Public Shared status As Integer
 
     Public Shared dbConn As New MySqlConnection
     Public Shared sqlCommand As New MySqlCommand
@@ -36,28 +36,26 @@ Public Class Class_Kamar
         End Set
     End Property
 
-    Public Property GSStatus As Boolean
+    Public Property GSStatus As Integer
         Get
             Return status
         End Get
-        Set(value As Boolean)
+        Set(value As Integer)
             status = value
         End Set
     End Property
 
-    Public Function GetIDJenisKamar() As List(Of String)
-        Dim result As New List(Of String)
+    Public Function GetIDJenisKamar() As DataTable
+        Dim result As New DataTable
 
         dbConn.ConnectionString = "server =" + server + ";" + "user id =" + username + ";" _
             + "password =" + password + ";" + "database =" + database
         dbConn.Open()
         sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT id_jenis_kamar FROM `jenis_kamar`;"
+        sqlCommand.CommandText = "SELECT id_jenis_kamar AS 'ID Jenis Kamar', jenis_kamar AS 'Jenis Kamar' FROM `jenis_kamar`;"
         sqlRead = sqlCommand.ExecuteReader
 
-        While sqlRead.Read
-            result.Add(sqlRead.GetInt32(0).ToString())
-        End While
+        result.Load(sqlRead)
 
         sqlRead.Close()
         dbConn.Close()
@@ -92,7 +90,7 @@ Public Class Class_Kamar
         Try
             dbConn.Open()
             sqlCommand.Connection = dbConn
-            sqlQuery = "INSERT INTO kamar (id_jenis_kamar, nama_kamar, status) VALUES ('" & id_jenis_kamar & "','" & nama_kamar & "','" & status & "');"
+            sqlQuery = "INSERT INTO kamar (id_jenis_kamar, nama_kamar, status) VALUES ('" & id_jenis_kamar & "','" & nama_kamar & "'," & status & ");"
 
             sqlCommand = New MySqlCommand(sqlQuery, dbConn)
             sqlRead = sqlCommand.ExecuteReader
@@ -124,9 +122,9 @@ Public Class Class_Kamar
         sqlRead = sqlCommand.ExecuteReader
 
         While sqlRead.Read
-            result.Add(sqlRead.GetInt32(0).ToString())
-            result.Add(sqlRead.GetString(1).ToString())
-            result.Add(sqlRead.GetBoolean(2))
+            result.Add(sqlRead.GetInt32(0))
+            result.Add(sqlRead.GetString(1))
+            result.Add(sqlRead.GetInt32(2))
 
         End While
 

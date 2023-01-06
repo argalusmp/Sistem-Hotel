@@ -9,6 +9,8 @@ Public Class Edit_Kamar
 
         ' Add any initialization after the InitializeComponent() call.
         ComboBoxIDJenisKamar.DataSource = Kamar.classKamar.GetIDJenisKamar()
+        ComboBoxIDJenisKamar.DisplayMember = "Jenis Kamar"
+        ComboBoxIDJenisKamar.ValueMember = "ID Jenis Kamar"
 
         LblIdKamar.Text = Kamar.selectedtableKamar
         txtNamaKamar.Text = Kamar.classKamar.GSNamaKamar
@@ -28,14 +30,17 @@ Public Class Edit_Kamar
     End Sub
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
-        Kamar.classKamar.GSIdJenisKamar = Integer.Parse(ComboBoxIDJenisKamar.SelectedItem())
+        Kamar.classKamar.GSIdJenisKamar = ComboBoxIDJenisKamar.SelectedValue
         Kamar.classKamar.GSNamaKamar = txtNamaKamar.Text.ToString()
 
         If RbtnKosong.Checked Then
             Kamar.classKamar.GSStatus = 0
-        ElseIf RbtnTerisi.Checked Then
+        End If
+
+        If RbtnTerisi.Checked Then
             Kamar.classKamar.GSStatus = 1
         End If
+
         Kamar.classKamar.UpdateDataKamarByIDDatabase(Kamar.selectedtableKamar,
                                                       Kamar.classKamar.GSIdJenisKamar,
                                                       Kamar.classKamar.GSNamaKamar,
@@ -46,4 +51,9 @@ Public Class Edit_Kamar
         Me.Close()
     End Sub
 
+    Private Sub Edit_Kamar_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        ComboBoxIDJenisKamar.DataSource = Kamar.classKamar.GetIDJenisKamar()
+        ComboBoxIDJenisKamar.DisplayMember = "Jenis Kamar"
+        ComboBoxIDJenisKamar.ValueMember = "ID Jenis Kamar"
+    End Sub
 End Class

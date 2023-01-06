@@ -35,9 +35,6 @@
         Booking.dataBooking.GSNamaTamu = CBNamaTamu.SelectedValue().ToString()
         Booking.dataBooking.GSCheckIn = DateCheckIn.Value
         Booking.dataBooking.GSCheckOut = DateCheckOut.Value
-        MessageBox.Show("edit")
-
-        MessageBox.Show("ID Kamar : " + Booking.dataBooking.GSNamaKamar)
 
         Booking.dataBooking.UpdateDataBookingByIDDatabase(Booking.selectedtablebooking, Booking.dataBooking.GSNamaTamu, Booking.dataBooking.GSNamaKamar, Booking.dataBooking.GSCheckIn, Booking.dataBooking.GSCheckOut)
         Me.Close()

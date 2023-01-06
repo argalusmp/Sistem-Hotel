@@ -41,6 +41,7 @@
         classKamar.GSNamaKamar = selectedKamar(1)
         classKamar.GSStatus = selectedKamar(2)
 
+
         Dim formEdit = New Edit_Kamar()
         formEdit.Show()
     End Sub
@@ -52,6 +53,7 @@
     End Sub
 
     Private Sub BtnHapus_Click(sender As Object, e As EventArgs) Handles BtnHapus.Click
+        Dim selectedKamar As List(Of String) = classKamar.GetDataKamarByIDDatabase(selectedtableKamar)
         Dim formHapus = New Hapus_Kamar()
         formHapus.Show()
     End Sub

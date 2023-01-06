@@ -9,7 +9,8 @@ Public Class Tambah_Kamar
 
         ' Add any initialization after the InitializeComponent() call.
         ComboBoxIDJenisKamar.DataSource = Kamar.classKamar.GetIDJenisKamar()
-
+        ComboBoxIDJenisKamar.DisplayMember = "Jenis Kamar"
+        ComboBoxIDJenisKamar.ValueMember = "ID Jenis Kamar"
 
     End Sub
 
@@ -21,16 +22,20 @@ Public Class Tambah_Kamar
 
     Private Sub BtnTambah_Click(sender As Object, e As EventArgs) Handles BtnTambah.Click
 
-        Kamar.classKamar.GSIdJenisKamar = Integer.Parse(ComboBoxIDJenisKamar.SelectedItem)
+        Kamar.classKamar.GSIdJenisKamar = ComboBoxIDJenisKamar.SelectedValue
         Kamar.classKamar.GSNamaKamar = txtNamaKamar.Text.ToString()
 
 
         If RbtnKosong.Checked Then
             Kamar.classKamar.GSStatus = 0
+        End If
 
-        ElseIf RbtnTerisi.Checked Then
+        If RbtnTerisi.Checked Then
             Kamar.classKamar.GSStatus = 1
         End If
+
+
+        MessageBox.Show(Kamar.classKamar.GSStatus)
 
         Kamar.classKamar.AddDataKamarDatabase(Kamar.classKamar.GSIdJenisKamar,
                                               Kamar.classKamar.GSNamaKamar,
@@ -59,7 +64,10 @@ Public Class Tambah_Kamar
         End If
     End Sub
 
-    Private Sub Tambah_Kamar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    Private Sub Tambah_Kamar_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        ComboBoxIDJenisKamar.DataSource = Kamar.classKamar.GetIDJenisKamar()
+        ComboBoxIDJenisKamar.DisplayMember = "Jenis Kamar"
+        ComboBoxIDJenisKamar.ValueMember = "ID Jenis Kamar"
     End Sub
 End Class
