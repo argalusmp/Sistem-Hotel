@@ -175,6 +175,12 @@
     <Compile Include="Kamar.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -190,6 +196,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Register.Designer.vb">
+      <DependentUpon>Register.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Register.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Tambah_Booking.Designer.vb">
       <DependentUpon>Tambah_Booking.vb</DependentUpon>
@@ -221,6 +233,7 @@
     <Compile Include="Tamu.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Users.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Booking.resx">
@@ -253,11 +266,17 @@
     <EmbeddedResource Include="Kamar.resx">
       <DependentUpon>Kamar.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tambah_Booking.resx">
       <DependentUpon>Tambah_Booking.vb</DependentUpon>
