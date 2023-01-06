@@ -35,8 +35,6 @@ Public Class Tambah_Kamar
         End If
 
 
-        MessageBox.Show(Kamar.classKamar.GSStatus)
-
         Kamar.classKamar.AddDataKamarDatabase(Kamar.classKamar.GSIdJenisKamar,
                                               Kamar.classKamar.GSNamaKamar,
                                               Kamar.classKamar.GSStatus)

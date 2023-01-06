@@ -43,8 +43,6 @@
         dataBooking.GSCheckIn = selectedBooking(4)
         dataBooking.GSCheckOut = selectedBooking(5)
 
-        MessageBox.Show(dataBooking.GSNamaTamu + " & " + dataBooking.GSNamaKamar)
-
         Dim formEdit = New Edit_Booking()
         formEdit.Show()
     End Sub
@@ -62,7 +60,6 @@
         Dim selectedBooking As List(Of String) = Booking.dataBooking.GetDataBookingByIDDatabase(selectedtablebooking)
 
         Booking.dataBooking.GSNamaTamu = selectedBooking(1)
-
 
         Dim formHapus = New Hapus_Booking()
         formHapus.Show()

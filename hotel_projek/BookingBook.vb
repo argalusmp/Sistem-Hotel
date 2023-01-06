@@ -56,8 +56,6 @@ Public Class BookingBook
     Public Function GetHargaBookingDatabase(nama_kamar As String)
         Dim result As Integer
 
-        MessageBox.Show("id kamar di get harga kamar " + nama_kamar)
-
         dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
             + "password=" + password + ";" + "database =" + database
         dbConn.Open()
@@ -110,7 +108,6 @@ Public Class BookingBook
         Dim jumlah_hari = GetDateBookingDatabase(check_in, check_out)
 
         dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" + "password=" + password + ";" + "database =" + database
-
 
         Try
             dbConn.Open()
@@ -213,12 +210,8 @@ Public Class BookingBook
         + "password =" + password + ";" + "database =" + database
 
         Try
-            MessageBox.Show("booking book")
             dbConn.Open()
             sqlCommand.Connection = dbConn
-
-            MessageBox.Show(nama_kamar + check_in + check_out)
-
 
             Dim jumlah_BAYAR = harga * jumlah_hari
             sqlQuery = "UPDATE booking_kamar SET id_tamu = " & nama_tamu & ", " &
@@ -229,7 +222,6 @@ Public Class BookingBook
 
             Console.WriteLine("Query Updata " + sqlQuery)
 
-            'MessageBox.Show(harga)
 
             sqlCommand = New MySqlCommand(sqlQuery, dbConn)
             sqlRead = sqlCommand.ExecuteReader
