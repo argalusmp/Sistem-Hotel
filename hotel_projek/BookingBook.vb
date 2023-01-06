@@ -60,13 +60,15 @@ Public Class BookingBook
             + "password=" + password + ";" + "database =" + database
         dbConn.Open()
         sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT harga_permalam FROM jenis_kamar INNER JOIN kamar ON jenis_kamar.id_jenis_kamar = kamar.id_jenis_kamar INNER JOIN booking_kamar ON kamar.id_kamar = booking_kamar.id_kamar WHERE kamar.nama_kamar = '" & nama_kamar & "'"
+        sqlCommand.CommandText = "SELECT harga_permalam FROM jenis_kamar INNER JOIN kamar ON jenis_kamar.id_jenis_kamar = kamar.id_jenis_kamar  WHERE kamar.id_kamar = '" & nama_kamar & "'"
 
 
         sqlRead = sqlCommand.ExecuteReader()
         While sqlRead.Read()
             result = sqlRead("harga_permalam")
+
         End While
+        MessageBox.Show(result)
         sqlRead.Close()
         dbConn.Close()
         Return result
@@ -87,6 +89,7 @@ Public Class BookingBook
         While sqlRead.Read()
             result = sqlRead("DATEDIFF('" & check_out.ToString("yyyy/MM/dd") & "', ' " & check_in.ToString("yyyy/MM/dd") & "')")
         End While
+        MessageBox.Show(result)
         sqlRead.Close()
         dbConn.Close()
         Return result
@@ -117,6 +120,7 @@ Public Class BookingBook
                     & status & "')"
 
             sqlCommand = New MySqlCommand(sqlQuery, dbConn)
+            MessageBox.Show(jumlah_BAYAR)
             sqlRead = sqlCommand.ExecuteReader
             dbConn.Close()
 
@@ -125,6 +129,7 @@ Public Class BookingBook
 
 
         Catch ex As Exception
+
             Return ex.Message
         Finally
             dbConn.Dispose()
