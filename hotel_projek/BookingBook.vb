@@ -56,19 +56,25 @@ Public Class BookingBook
     Public Function GetHargaBookingDatabase(nama_kamar As String)
         Dim result As Integer
 
+        MessageBox.Show("id kamar di get harga kamar " + nama_kamar)
+
         dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
             + "password=" + password + ";" + "database =" + database
         dbConn.Open()
         sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT harga_permalam FROM jenis_kamar INNER JOIN kamar ON jenis_kamar.id_jenis_kamar = kamar.id_jenis_kamar  WHERE kamar.id_kamar = '" & nama_kamar & "'"
+        Dim query = "SELECT harga_permalam FROM jenis_kamar 
+                    INNER JOIN kamar ON jenis_kamar.id_jenis_kamar = kamar.id_jenis_kamar WHERE kamar.id_kamar = '" & nama_kamar & "'"
+
+        sqlCommand.CommandText = query
 
 
         sqlRead = sqlCommand.ExecuteReader()
         While sqlRead.Read()
             result = sqlRead("harga_permalam")
-
         End While
+
         MessageBox.Show(result)
+
         sqlRead.Close()
         dbConn.Close()
         Return result
@@ -89,7 +95,7 @@ Public Class BookingBook
         While sqlRead.Read()
             result = sqlRead("DATEDIFF('" & check_out.ToString("yyyy/MM/dd") & "', ' " & check_in.ToString("yyyy/MM/dd") & "')")
         End While
-        MessageBox.Show(result)
+
         sqlRead.Close()
         dbConn.Close()
         Return result
@@ -120,7 +126,7 @@ Public Class BookingBook
                     & status & "')"
 
             sqlCommand = New MySqlCommand(sqlQuery, dbConn)
-            MessageBox.Show(jumlah_BAYAR)
+
             sqlRead = sqlCommand.ExecuteReader
             dbConn.Close()
 
@@ -200,20 +206,30 @@ Public Class BookingBook
 
     Public Function UpdateDataBookingByIDDatabase(id_booking As Integer, nama_tamu As String, nama_kamar As String, check_in As Date, check_out As Date)
 
+        Dim harga = GetHargaBookingDatabase(nama_kamar)
+        Dim jumlah_hari = GetDateBookingDatabase(check_in, check_out)
+
         dbConn.ConnectionString = "server =" + server + ";" + "user id =" + username + ";" _
         + "password =" + password + ";" + "database =" + database
 
         Try
+            MessageBox.Show("booking book")
             dbConn.Open()
             sqlCommand.Connection = dbConn
-            Dim harga = "SELECT harga_permalam FROM jenis_kamar INNER JOIN kamar ON jenis_kamar.id_jenis_kamar = kamar.id_jenis_kamar INNER JOIN booking_kamar ON kamar.id_kamar = booking_kamar.id_kamar WHERE kamar.nama_kamar = '" & nama_kamar & "'"
-            Dim lama_menginap = "SELECT DATEDIFF('" & check_out & "'" & "', ' " & check_in & "') FROM booking_kamar"
-            Dim jumlah_BAYAR = harga * lama_menginap
-            sqlQuery = "UPDATE booking_kamar SET id_tamu = (SELECT id_tamu FROM tamu WHERE nama = '" & nama_tamu & "'), " &
-                        "id_kamar= (SELECT id_kamar FROM kamar WHERE nama_kamar = '" & nama_kamar & "'), " &
-                        "check_in= " & check_in & ", " &
-                        "check_out= " & check_out & " " &
-                        "WHERE id_booking = " & id_booking & ";"
+
+            MessageBox.Show(nama_kamar + check_in + check_out)
+
+
+            Dim jumlah_BAYAR = harga * jumlah_hari
+            sqlQuery = "UPDATE booking_kamar SET id_tamu = " & nama_tamu & ", " &
+                       "id_kamar=" & nama_kamar & ", " &
+                        "check_in='" & check_in.ToString("yyyy/MM/dd") & "', " &
+                        "check_out='" & check_out.ToString("yyyy/MM/dd") & "' " &
+                       "WHERE id_booking = " & id_booking & ";"
+
+            Console.WriteLine("Query Updata " + sqlQuery)
+
+            'MessageBox.Show(harga)
 
             sqlCommand = New MySqlCommand(sqlQuery, dbConn)
             sqlRead = sqlCommand.ExecuteReader
