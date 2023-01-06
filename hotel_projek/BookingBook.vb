@@ -229,6 +229,33 @@ Public Class BookingBook
 
     End Function
 
+    Public Function DeleteDataBookingByIDDatabase(id_booking As Integer)
+
+        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
+            + "password=" + password + ";" + "database =" + database
+
+        Try
+            dbConn.Open()
+            sqlCommand.Connection = dbConn
+            sqlQuery = "DELETE FROM booking_kamar " &
+                        "WHERE id_tamu='" & id_booking & "'"
+
+            Debug.WriteLine(sqlQuery)
+
+            sqlCommand = New MySqlCommand(sqlQuery, dbConn)
+            sqlRead = sqlCommand.ExecuteReader
+            dbConn.Close()
+
+            sqlRead.Close()
+            dbConn.Close()
+
+        Catch ex As Exception
+            Return ex.Message
+        Finally
+            dbConn.Dispose()
+        End Try
+    End Function
+
     Public Property GSNamaKamar() As String
         Get
             Return nama_kamar
