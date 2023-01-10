@@ -120,7 +120,9 @@ Public Class BookingBook
                     & check_in.ToString("yyyy/MM/dd") & " ', '" _
                     & check_out.ToString("yyyy/MM/dd") & " ', '" _
                     & jumlah_BAYAR & " ', '" _
-                    & status & "')"
+                    & status & "'); UPDATE kamar SET status = 1 WHERE id_kamar = " & nama_kamar & " ; "
+
+
 
             sqlCommand = New MySqlCommand(sqlQuery, dbConn)
 
@@ -217,7 +219,8 @@ Public Class BookingBook
             sqlQuery = "UPDATE booking_kamar SET id_tamu = " & nama_tamu & ", " &
                        "id_kamar=" & nama_kamar & ", " &
                         "check_in='" & check_in.ToString("yyyy/MM/dd") & "', " &
-                        "check_out='" & check_out.ToString("yyyy/MM/dd") & "' " &
+                        "check_out='" & check_out.ToString("yyyy/MM/dd") & "', " &
+                        "total_bayar=" & jumlah_BAYAR & " " &
                        "WHERE id_booking = " & id_booking & ";"
 
             Console.WriteLine("Query Updata " + sqlQuery)
@@ -263,6 +266,8 @@ Public Class BookingBook
             dbConn.Dispose()
         End Try
     End Function
+
+
 
     Public Property GSNamaKamar() As String
         Get

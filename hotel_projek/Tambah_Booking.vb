@@ -22,7 +22,9 @@
 
 
 
-        CBNamaKamar.DataSource = Booking.dataKamar.GetDataKamarDatabase()
+
+
+        CBNamaKamar.DataSource = Booking.dataKamar.GetDataKamarKosongDatabase()
         CBNamaKamar.DisplayMember = "Nama Kamar"
         CBNamaKamar.ValueMember = "ID Kamar"
 
