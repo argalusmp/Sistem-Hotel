@@ -80,6 +80,23 @@ Public Class Class_Kamar
         Return result
     End Function
 
+    Public Function GetDataKamarKosongDatabase() As DataTable
+        Dim result As New DataTable
+
+        dbConn.ConnectionString = "server =" + server + ";" + "user id =" + username + ";" _
+            + "password =" + password + ";" + "database =" + database
+        dbConn.Open()
+        sqlCommand.Connection = dbConn
+        sqlCommand.CommandText = "SELECT id_kamar AS `ID Kamar`, id_jenis_kamar AS `ID Jenis Kamar`, nama_kamar AS `Nama Kamar` FROM kamar WHERE status = 0;"
+        sqlRead = sqlCommand.ExecuteReader
+
+        result.Load(sqlRead)
+
+        sqlRead.Close()
+        dbConn.Close()
+        Return result
+    End Function
+
     Public Function AddDataKamarDatabase(id_jenis_kamar As Integer,
                                          nama_kamar As String,
                                          status As Boolean)
