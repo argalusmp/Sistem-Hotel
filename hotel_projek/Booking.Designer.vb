@@ -26,6 +26,7 @@ Partial Class Booking
         Me.BtnAddBook = New System.Windows.Forms.Button()
         Me.BtnRemoveBook = New System.Windows.Forms.Button()
         Me.BtnEditBook = New System.Windows.Forms.Button()
+        Me.btnBack = New System.Windows.Forms.Button()
         CType(Me.DataGridViewBooking, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -42,7 +43,7 @@ Partial Class Booking
         '
         'BtnAddBook
         '
-        Me.BtnAddBook.Location = New System.Drawing.Point(209, 351)
+        Me.BtnAddBook.Location = New System.Drawing.Point(886, 355)
         Me.BtnAddBook.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnAddBook.Name = "BtnAddBook"
         Me.BtnAddBook.Size = New System.Drawing.Size(149, 34)
@@ -52,7 +53,7 @@ Partial Class Booking
         '
         'BtnRemoveBook
         '
-        Me.BtnRemoveBook.Location = New System.Drawing.Point(473, 351)
+        Me.BtnRemoveBook.Location = New System.Drawing.Point(1150, 355)
         Me.BtnRemoveBook.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnRemoveBook.Name = "BtnRemoveBook"
         Me.BtnRemoveBook.Size = New System.Drawing.Size(91, 34)
@@ -62,7 +63,7 @@ Partial Class Booking
         '
         'BtnEditBook
         '
-        Me.BtnEditBook.Location = New System.Drawing.Point(365, 351)
+        Me.BtnEditBook.Location = New System.Drawing.Point(1042, 355)
         Me.BtnEditBook.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnEditBook.Name = "BtnEditBook"
         Me.BtnEditBook.Size = New System.Drawing.Size(91, 34)
@@ -70,11 +71,21 @@ Partial Class Booking
         Me.BtnEditBook.Text = "Edit"
         Me.BtnEditBook.UseVisualStyleBackColor = True
         '
+        'btnBack
+        '
+        Me.btnBack.Location = New System.Drawing.Point(59, 402)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(94, 36)
+        Me.btnBack.TabIndex = 15
+        Me.btnBack.Text = "<  Back"
+        Me.btnBack.UseVisualStyleBackColor = True
+        '
         'Booking
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1285, 450)
+        Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.BtnEditBook)
         Me.Controls.Add(Me.BtnRemoveBook)
         Me.Controls.Add(Me.BtnAddBook)
@@ -91,4 +102,5 @@ Partial Class Booking
     Friend WithEvents BtnAddBook As Button
     Friend WithEvents BtnRemoveBook As Button
     Friend WithEvents BtnEditBook As Button
+    Friend WithEvents btnBack As Button
 End Class

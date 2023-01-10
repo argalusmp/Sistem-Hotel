@@ -26,6 +26,7 @@ Partial Class Tamu
         Me.BtnTambah = New System.Windows.Forms.Button()
         Me.BtnEdit = New System.Windows.Forms.Button()
         Me.BtnHapus = New System.Windows.Forms.Button()
+        Me.btnBack = New System.Windows.Forms.Button()
         CType(Me.DataGridViewTamu, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -66,11 +67,21 @@ Partial Class Tamu
         Me.BtnHapus.Text = "Hapus"
         Me.BtnHapus.UseVisualStyleBackColor = True
         '
+        'btnBack
+        '
+        Me.btnBack.Location = New System.Drawing.Point(23, 450)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(94, 36)
+        Me.btnBack.TabIndex = 14
+        Me.btnBack.Text = "<  Back"
+        Me.btnBack.UseVisualStyleBackColor = True
+        '
         'Tamu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(770, 498)
+        Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.BtnHapus)
         Me.Controls.Add(Me.BtnEdit)
         Me.Controls.Add(Me.BtnTambah)
@@ -86,4 +97,5 @@ Partial Class Tamu
     Friend WithEvents BtnTambah As Button
     Friend WithEvents BtnEdit As Button
     Friend WithEvents BtnHapus As Button
+    Friend WithEvents btnBack As Button
 End Class

@@ -29,6 +29,7 @@ Partial Class Register
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnRegister = New System.Windows.Forms.Button()
+        Me.btnBack = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'txtPassword
@@ -88,11 +89,21 @@ Partial Class Register
         Me.btnRegister.Text = "Register"
         Me.btnRegister.UseVisualStyleBackColor = True
         '
+        'btnBack
+        '
+        Me.btnBack.Location = New System.Drawing.Point(25, 402)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(94, 36)
+        Me.btnBack.TabIndex = 13
+        Me.btnBack.Text = "<  Back"
+        Me.btnBack.UseVisualStyleBackColor = True
+        '
         'Register
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.btnRegister)
         Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.Label3)
@@ -114,4 +125,5 @@ Partial Class Register
     Friend WithEvents txtUsername As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents btnRegister As Button
+    Friend WithEvents btnBack As Button
 End Class

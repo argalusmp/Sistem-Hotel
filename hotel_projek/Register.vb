@@ -38,4 +38,9 @@
             Return False
         End Try
     End Function
+
+    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        Login.Show()
+        Me.Close()
+    End Sub
 End Class

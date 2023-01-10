@@ -28,6 +28,7 @@ Partial Class Jenis_Kamar
         Me.BtnEdit = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.btnBack = New System.Windows.Forms.Button()
         CType(Me.DataGridViewJenisKamar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -97,12 +98,22 @@ Partial Class Jenis_Kamar
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "TADIKA MESRA"
         '
+        'btnBack
+        '
+        Me.btnBack.Location = New System.Drawing.Point(12, 12)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(94, 36)
+        Me.btnBack.TabIndex = 15
+        Me.btnBack.Text = "<  Back"
+        Me.btnBack.UseVisualStyleBackColor = True
+        '
         'Jenis_Kamar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BtnEdit)
@@ -123,4 +134,5 @@ Partial Class Jenis_Kamar
     Friend WithEvents BtnEdit As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents btnBack As Button
 End Class

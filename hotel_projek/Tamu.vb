@@ -58,4 +58,10 @@
     Private Sub DataGridViewTamu_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewTamu.CellContentClick
 
     End Sub
+
+    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        Dim form_menu = New Menu()
+        form_menu.Show()
+        Me.Close()
+    End Sub
 End Class

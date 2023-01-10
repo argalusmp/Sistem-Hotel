@@ -23,11 +23,15 @@
 
         If data_user.Count > 0 Then
             Users.GSUsername = data_user(0)
-            'Dim form_menu = New Menu()
-            'form_menu.show()
+            Dim form_menu = New Menu()
+            form_menu.Show()
             Me.Hide()
         Else
-            MessageBox.Show("Wrong Password!")
+            MessageBox.Show("Data user tidak ditemukan!")
+        End If
+
+        If txtUsername.Text Is Nothing Then
+            MessageBox.Show("Username wajib diisi!")
         End If
     End Sub
 
