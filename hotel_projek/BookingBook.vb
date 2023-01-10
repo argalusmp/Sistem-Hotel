@@ -240,7 +240,7 @@ Public Class BookingBook
 
     End Function
 
-    Public Function DeleteDataBookingByIDDatabase(id_booking As Integer)
+    Public Function DeleteDataBookingByIDDatabase(id_booking As Integer, id_kamar As Integer)
 
         dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
             + "password=" + password + ";" + "database =" + database
@@ -249,7 +249,7 @@ Public Class BookingBook
             dbConn.Open()
             sqlCommand.Connection = dbConn
             sqlQuery = "DELETE FROM booking_kamar " &
-                        "WHERE id_booking='" & id_booking & "'"
+                        "WHERE id_booking='" & id_booking & "'; UPDATE kamar SET status = 0 WHERE id_kamar = " & id_kamar & ";"
 
             Debug.WriteLine(sqlQuery)
 

@@ -26,6 +26,9 @@ Partial Class Hapus_Booking
         Me.LblNamaTamu = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.LblNamaKamar = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'BtnHapusBooking
@@ -41,7 +44,7 @@ Partial Class Hapus_Booking
         '
         Me.LblNamaTamu.AutoSize = True
         Me.LblNamaTamu.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblNamaTamu.Location = New System.Drawing.Point(220, 155)
+        Me.LblNamaTamu.Location = New System.Drawing.Point(302, 126)
         Me.LblNamaTamu.Name = "LblNamaTamu"
         Me.LblNamaTamu.Size = New System.Drawing.Size(100, 20)
         Me.LblNamaTamu.TabIndex = 6
@@ -67,11 +70,44 @@ Partial Class Hapus_Booking
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Form Menghapus Data Booking" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(128, 126)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(110, 20)
+        Me.Label3.TabIndex = 8
+        Me.Label3.Text = "Nama Tamu :"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(128, 170)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(117, 20)
+        Me.Label4.TabIndex = 9
+        Me.Label4.Text = "Nama Kamar :"
+        '
+        'LblNamaKamar
+        '
+        Me.LblNamaKamar.AutoSize = True
+        Me.LblNamaKamar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNamaKamar.Location = New System.Drawing.Point(302, 170)
+        Me.LblNamaKamar.Name = "LblNamaKamar"
+        Me.LblNamaKamar.Size = New System.Drawing.Size(112, 20)
+        Me.LblNamaKamar.TabIndex = 10
+        Me.LblNamaKamar.Text = "Nama Kamar "
+        '
         'Hapus_Booking
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(561, 273)
+        Me.Controls.Add(Me.LblNamaKamar)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.BtnHapusBooking)
         Me.Controls.Add(Me.LblNamaTamu)
         Me.Controls.Add(Me.Label2)
@@ -87,4 +123,7 @@ Partial Class Hapus_Booking
     Friend WithEvents LblNamaTamu As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents LblNamaKamar As Label
 End Class

@@ -7,6 +7,7 @@
 
     Public Shared selectedtablebooking As Integer
     Public Shared selectedtablebookingnama
+    Public Shared selectedtablebookingidkamar
 
     Public Sub New()
 
@@ -54,12 +55,14 @@
 
         selectedtablebooking = selectedRow.Cells(0).Value
         selectedtablebookingnama = selectedRow.Cells(2).Value
+        selectedtablebookingidkamar = selectedRow.Cells(3).Value
     End Sub
 
     Private Sub BtnRemoveBook_Click(sender As Object, e As EventArgs) Handles BtnRemoveBook.Click
         Dim selectedBooking As List(Of String) = Booking.dataBooking.GetDataBookingByIDDatabase(selectedtablebooking)
 
         Booking.dataBooking.GSNamaTamu = selectedBooking(1)
+        Booking.dataBooking.GSNamaKamar = selectedBooking(3)
 
         Dim formHapus = New Hapus_Booking()
         formHapus.Show()
