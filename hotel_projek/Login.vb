@@ -21,6 +21,7 @@
         Dim data_user As New List(Of String)
         data_user = Users.CheckAuthDB(plainUsername, plainEmail, plainPassword)
 
+
         If data_user.Count > 0 Then
             Users.GSUsername = data_user(0)
             Dim form_menu = New Menu()
@@ -30,9 +31,7 @@
             MessageBox.Show("Data user tidak ditemukan!")
         End If
 
-        If txtUsername.Text Is Nothing Then
-            MessageBox.Show("Username wajib diisi!")
-        End If
+
     End Sub
 
     Private Sub linkRegister_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linkRegister.LinkClicked

@@ -26,7 +26,6 @@ Partial Class Menu
         Me.btnKamar = New System.Windows.Forms.Button()
         Me.btnJenisKamar = New System.Windows.Forms.Button()
         Me.btnBooking = New System.Windows.Forms.Button()
-        Me.btnCheckout = New System.Windows.Forms.Button()
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -66,22 +65,13 @@ Partial Class Menu
         Me.btnBooking.Text = "Booking"
         Me.btnBooking.UseVisualStyleBackColor = True
         '
-        'btnCheckout
-        '
-        Me.btnCheckout.Location = New System.Drawing.Point(33, 301)
-        Me.btnCheckout.Name = "btnCheckout"
-        Me.btnCheckout.Size = New System.Drawing.Size(203, 42)
-        Me.btnCheckout.TabIndex = 4
-        Me.btnCheckout.Text = "Check Out"
-        Me.btnCheckout.UseVisualStyleBackColor = True
-        '
         'btnLogout
         '
         Me.btnLogout.BackColor = System.Drawing.Color.Red
         Me.btnLogout.FlatAppearance.BorderSize = 0
         Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLogout.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnLogout.Location = New System.Drawing.Point(33, 371)
+        Me.btnLogout.Location = New System.Drawing.Point(33, 303)
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Size = New System.Drawing.Size(203, 42)
         Me.btnLogout.TabIndex = 5
@@ -92,9 +82,8 @@ Partial Class Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(273, 450)
+        Me.ClientSize = New System.Drawing.Size(273, 373)
         Me.Controls.Add(Me.btnLogout)
-        Me.Controls.Add(Me.btnCheckout)
         Me.Controls.Add(Me.btnBooking)
         Me.Controls.Add(Me.btnJenisKamar)
         Me.Controls.Add(Me.btnKamar)
@@ -109,6 +98,5 @@ Partial Class Menu
     Friend WithEvents btnKamar As Button
     Friend WithEvents btnJenisKamar As Button
     Friend WithEvents btnBooking As Button
-    Friend WithEvents btnCheckout As Button
     Friend WithEvents btnLogout As Button
 End Class

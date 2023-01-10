@@ -30,12 +30,13 @@ Partial Class Login
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.linkRegister = New System.Windows.Forms.LinkLabel()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(182, 76)
+        Me.Label1.Location = New System.Drawing.Point(36, 49)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(70, 16)
         Me.Label1.TabIndex = 0
@@ -43,14 +44,14 @@ Partial Class Login
         '
         'txtUsername
         '
-        Me.txtUsername.Location = New System.Drawing.Point(310, 73)
+        Me.txtUsername.Location = New System.Drawing.Point(164, 46)
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.Size = New System.Drawing.Size(261, 22)
         Me.txtUsername.TabIndex = 1
         '
         'txtEmail
         '
-        Me.txtEmail.Location = New System.Drawing.Point(310, 134)
+        Me.txtEmail.Location = New System.Drawing.Point(164, 107)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(261, 22)
         Me.txtEmail.TabIndex = 3
@@ -58,7 +59,7 @@ Partial Class Login
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(182, 137)
+        Me.Label2.Location = New System.Drawing.Point(36, 110)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(41, 16)
         Me.Label2.TabIndex = 2
@@ -66,7 +67,7 @@ Partial Class Login
         '
         'txtPassword
         '
-        Me.txtPassword.Location = New System.Drawing.Point(310, 201)
+        Me.txtPassword.Location = New System.Drawing.Point(164, 174)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(261, 22)
         Me.txtPassword.TabIndex = 5
@@ -75,7 +76,7 @@ Partial Class Login
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(182, 204)
+        Me.Label3.Location = New System.Drawing.Point(36, 177)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(67, 16)
         Me.Label3.TabIndex = 4
@@ -83,9 +84,9 @@ Partial Class Login
         '
         'btnLogin
         '
-        Me.btnLogin.Location = New System.Drawing.Point(496, 255)
+        Me.btnLogin.Location = New System.Drawing.Point(164, 238)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(75, 23)
+        Me.btnLogin.Size = New System.Drawing.Size(261, 34)
         Me.btnLogin.TabIndex = 6
         Me.btnLogin.Text = "Log In"
         Me.btnLogin.UseVisualStyleBackColor = True
@@ -93,18 +94,28 @@ Partial Class Login
         'linkRegister
         '
         Me.linkRegister.AutoSize = True
-        Me.linkRegister.Location = New System.Drawing.Point(414, 258)
+        Me.linkRegister.Location = New System.Drawing.Point(338, 302)
         Me.linkRegister.Name = "linkRegister"
         Me.linkRegister.Size = New System.Drawing.Size(58, 16)
         Me.linkRegister.TabIndex = 7
         Me.linkRegister.TabStop = True
         Me.linkRegister.Text = "Register"
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(183, 302)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(142, 16)
+        Me.Label4.TabIndex = 8
+        Me.Label4.Text = "Create a new account?"
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(471, 362)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.linkRegister)
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.txtPassword)
@@ -128,4 +139,5 @@ Partial Class Login
     Friend WithEvents Label3 As Label
     Friend WithEvents btnLogin As Button
     Friend WithEvents linkRegister As LinkLabel
+    Friend WithEvents Label4 As Label
 End Class

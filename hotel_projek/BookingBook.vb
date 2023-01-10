@@ -189,7 +189,7 @@ Public Class BookingBook
             result.Add(sqlRead.GetString(3).ToString())
             result.Add(sqlRead.GetDateTime(4).ToString())
             result.Add(sqlRead.GetDateTime(5).ToString())
-            'result.Add(sqlRead.GetInt32(6).ToString())
+            result.Add(sqlRead.GetInt32(6).ToString())
             result.Add(sqlRead.GetBoolean(7))
 
 
@@ -267,6 +267,32 @@ Public Class BookingBook
         End Try
     End Function
 
+    Public Function CheckoutDataBookingByIDDatabase(id_booking As Integer)
+
+        dbConn.ConnectionString = "server =" + server + ";" + "user id=" + username + ";" _
+            + "password=" + password + ";" + "database =" + database
+
+        Try
+            dbConn.Open()
+            sqlCommand.Connection = dbConn
+            sqlQuery = " UPDATE booking_kamar SET status = 1 
+                         WHERE id_booking = " & id_booking & ";"
+
+            Debug.WriteLine(sqlQuery)
+
+            sqlCommand = New MySqlCommand(sqlQuery, dbConn)
+            sqlRead = sqlCommand.ExecuteReader
+            dbConn.Close()
+
+            sqlRead.Close()
+            dbConn.Close()
+
+        Catch ex As Exception
+            Return ex.Message
+        Finally
+            dbConn.Dispose()
+        End Try
+    End Function
 
 
     Public Property GSNamaKamar() As String

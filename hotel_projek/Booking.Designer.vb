@@ -27,6 +27,7 @@ Partial Class Booking
         Me.BtnRemoveBook = New System.Windows.Forms.Button()
         Me.BtnEditBook = New System.Windows.Forms.Button()
         Me.btnBack = New System.Windows.Forms.Button()
+        Me.BtnCheckout = New System.Windows.Forms.Button()
         CType(Me.DataGridViewBooking, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -43,7 +44,7 @@ Partial Class Booking
         '
         'BtnAddBook
         '
-        Me.BtnAddBook.Location = New System.Drawing.Point(886, 355)
+        Me.BtnAddBook.Location = New System.Drawing.Point(898, 355)
         Me.BtnAddBook.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnAddBook.Name = "BtnAddBook"
         Me.BtnAddBook.Size = New System.Drawing.Size(149, 34)
@@ -63,7 +64,7 @@ Partial Class Booking
         '
         'BtnEditBook
         '
-        Me.BtnEditBook.Location = New System.Drawing.Point(1042, 355)
+        Me.BtnEditBook.Location = New System.Drawing.Point(1053, 355)
         Me.BtnEditBook.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnEditBook.Name = "BtnEditBook"
         Me.BtnEditBook.Size = New System.Drawing.Size(91, 34)
@@ -80,11 +81,22 @@ Partial Class Booking
         Me.btnBack.Text = "<  Back"
         Me.btnBack.UseVisualStyleBackColor = True
         '
+        'BtnCheckout
+        '
+        Me.BtnCheckout.Location = New System.Drawing.Point(743, 355)
+        Me.BtnCheckout.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BtnCheckout.Name = "BtnCheckout"
+        Me.BtnCheckout.Size = New System.Drawing.Size(149, 34)
+        Me.BtnCheckout.TabIndex = 16
+        Me.BtnCheckout.Text = "Check Out"
+        Me.BtnCheckout.UseVisualStyleBackColor = True
+        '
         'Booking
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1285, 450)
+        Me.Controls.Add(Me.BtnCheckout)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.BtnEditBook)
         Me.Controls.Add(Me.BtnRemoveBook)
@@ -103,4 +115,5 @@ Partial Class Booking
     Friend WithEvents BtnRemoveBook As Button
     Friend WithEvents BtnEditBook As Button
     Friend WithEvents btnBack As Button
+    Friend WithEvents BtnCheckout As Button
 End Class

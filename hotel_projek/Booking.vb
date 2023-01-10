@@ -73,4 +73,18 @@
         form_menu.Show()
         Me.Close()
     End Sub
+
+    Private Sub BtnCheckout_Click(sender As Object, e As EventArgs) Handles BtnCheckout.Click
+        Dim selectedBooking As List(Of String) = Booking.dataBooking.GetDataBookingByIDDatabase(selectedtablebooking)
+
+        Booking.dataBooking.GSNamaTamu = selectedBooking(1)
+        Booking.dataBooking.GSNamaKamar = selectedBooking(3)
+        Booking.dataBooking.GSCheckIn = selectedBooking(4)
+        Booking.dataBooking.GSCheckOut = selectedBooking(5)
+        Booking.dataBooking.GSTotalBayar = selectedBooking(6)
+
+
+        Dim form_checkout = New Checkout()
+        form_checkout.Show()
+    End Sub
 End Class

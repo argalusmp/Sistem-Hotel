@@ -118,6 +118,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BookingBook.vb" />
+    <Compile Include="Checkout.Designer.vb">
+      <DependentUpon>Checkout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Class_Kamar.vb" />
     <Compile Include="DataJenisHotel.vb" />
     <Compile Include="DataTamu.vb" />
@@ -250,6 +256,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Booking.resx">
       <DependentUpon>Booking.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Checkout.resx">
+      <DependentUpon>Checkout.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Edit_Booking.resx">
       <DependentUpon>Edit_Booking.vb</DependentUpon>
