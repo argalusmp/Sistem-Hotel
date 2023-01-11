@@ -72,9 +72,9 @@ Partial Class Checkout
         Me.lblTotalBayar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotalBayar.Location = New System.Drawing.Point(253, 334)
         Me.lblTotalBayar.Name = "lblTotalBayar"
-        Me.lblTotalBayar.Size = New System.Drawing.Size(71, 30)
+        Me.lblTotalBayar.Size = New System.Drawing.Size(112, 30)
         Me.lblTotalBayar.TabIndex = 4
-        Me.lblTotalBayar.Text = "000000"
+        Me.lblTotalBayar.Text = "0000000000"
         Me.lblTotalBayar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnSubmit
@@ -94,7 +94,7 @@ Partial Class Checkout
         Me.btnCancel.BackColor = System.Drawing.Color.Red
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancel.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnCancel.Location = New System.Drawing.Point(139, 434)
+        Me.btnCancel.Location = New System.Drawing.Point(139, 435)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(130, 40)
         Me.btnCancel.TabIndex = 6
@@ -128,9 +128,9 @@ Partial Class Checkout
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(28, 135)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(165, 20)
+        Me.Label3.Size = New System.Drawing.Size(170, 20)
         Me.Label3.TabIndex = 9
-        Me.Label3.Text = "Nama Tamu            :"
+        Me.Label3.Text = "Nama Tamu             :"
         '
         'Label4
         '
@@ -138,9 +138,9 @@ Partial Class Checkout
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(28, 193)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(163, 20)
+        Me.Label4.Size = New System.Drawing.Size(168, 20)
         Me.Label4.TabIndex = 10
-        Me.Label4.Text = "Kamar                    :"
+        Me.Label4.Text = "Kamar                     :"
         '
         'Label5
         '

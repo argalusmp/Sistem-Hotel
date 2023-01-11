@@ -19,7 +19,7 @@
         Me.Hide()
     End Sub
 
-    Private Sub btnCheckout_Click(sender As Object, e As EventArgs) 
+    Private Sub btnCheckout_Click(sender As Object, e As EventArgs)
         'checkout.show()
         Me.Hide()
     End Sub

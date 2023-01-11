@@ -21,15 +21,19 @@
         Dim data_user As New List(Of String)
         data_user = Users.CheckAuthDB(plainUsername, plainEmail, plainPassword)
 
-
-        If data_user.Count > 0 Then
-            Users.GSUsername = data_user(0)
-            Dim form_menu = New Menu()
-            form_menu.Show()
-            Me.Hide()
+        If String.IsNullOrEmpty(txtUsername.Text) Or String.IsNullOrEmpty(txtEmail.Text) Or String.IsNullOrEmpty(txtPassword.Text) Then
+            MessageBox.Show("Isi data untuk melanjutkan!")
         Else
-            MessageBox.Show("Data user tidak ditemukan!")
+            If data_user.Count > 0 Then
+                Users.GSUsername = data_user(0)
+                Dim form_menu = New Menu()
+                form_menu.Show()
+                Me.Hide()
+            Else
+                MessageBox.Show("Data user tidak ditemukan!")
+            End If
         End If
+
 
 
     End Sub
