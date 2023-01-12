@@ -48,11 +48,12 @@ Partial Class Tambah_Tamu
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(26, 22)
+        Me.Label1.Location = New System.Drawing.Point(82, 22)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(363, 29)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Form Tambah Informasi Tamu"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Label2
         '
@@ -140,12 +141,15 @@ Partial Class Tambah_Tamu
         '
         'BtnTambahTamu
         '
-        Me.BtnTambahTamu.Location = New System.Drawing.Point(365, 456)
+        Me.BtnTambahTamu.BackColor = System.Drawing.Color.LimeGreen
+        Me.BtnTambahTamu.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnTambahTamu.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnTambahTamu.Location = New System.Drawing.Point(354, 454)
         Me.BtnTambahTamu.Name = "BtnTambahTamu"
-        Me.BtnTambahTamu.Size = New System.Drawing.Size(110, 33)
+        Me.BtnTambahTamu.Size = New System.Drawing.Size(121, 39)
         Me.BtnTambahTamu.TabIndex = 11
-        Me.BtnTambahTamu.Text = "Tambah Tamu"
-        Me.BtnTambahTamu.UseVisualStyleBackColor = True
+        Me.BtnTambahTamu.Text = "Tambah "
+        Me.BtnTambahTamu.UseVisualStyleBackColor = False
         '
         'Tambah_Tamu
         '

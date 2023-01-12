@@ -39,12 +39,15 @@ Partial Class Edit_Tamu
         '
         'BtnEditTamu
         '
+        Me.BtnEditTamu.BackColor = System.Drawing.Color.DarkOrange
+        Me.BtnEditTamu.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEditTamu.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BtnEditTamu.Location = New System.Drawing.Point(360, 461)
         Me.BtnEditTamu.Name = "BtnEditTamu"
         Me.BtnEditTamu.Size = New System.Drawing.Size(110, 40)
         Me.BtnEditTamu.TabIndex = 21
         Me.BtnEditTamu.Text = "Edit Tamu"
-        Me.BtnEditTamu.UseVisualStyleBackColor = True
+        Me.BtnEditTamu.UseVisualStyleBackColor = False
         '
         'RtbAlamat
         '
@@ -134,11 +137,12 @@ Partial Class Edit_Tamu
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(21, 27)
+        Me.Label1.Location = New System.Drawing.Point(109, 26)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(314, 29)
         Me.Label1.TabIndex = 13
         Me.Label1.Text = "Form Edit Informasi Tamu"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'TxtNIK
         '

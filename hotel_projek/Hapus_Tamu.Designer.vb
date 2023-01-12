@@ -51,21 +51,25 @@ Partial Class Hapus_Tamu
         'LblNamaTamu
         '
         Me.LblNamaTamu.AutoSize = True
-        Me.LblNamaTamu.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNamaTamu.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNamaTamu.ForeColor = System.Drawing.Color.Black
         Me.LblNamaTamu.Location = New System.Drawing.Point(219, 154)
         Me.LblNamaTamu.Name = "LblNamaTamu"
-        Me.LblNamaTamu.Size = New System.Drawing.Size(100, 20)
+        Me.LblNamaTamu.Size = New System.Drawing.Size(109, 20)
         Me.LblNamaTamu.TabIndex = 2
         Me.LblNamaTamu.Text = "Nama Tamu"
         '
         'BtnHapusTamu
         '
+        Me.BtnHapusTamu.BackColor = System.Drawing.Color.Red
+        Me.BtnHapusTamu.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnHapusTamu.ForeColor = System.Drawing.Color.White
         Me.BtnHapusTamu.Location = New System.Drawing.Point(213, 215)
         Me.BtnHapusTamu.Name = "BtnHapusTamu"
         Me.BtnHapusTamu.Size = New System.Drawing.Size(114, 33)
         Me.BtnHapusTamu.TabIndex = 3
-        Me.BtnHapusTamu.Text = "Hapus Tamu"
-        Me.BtnHapusTamu.UseVisualStyleBackColor = True
+        Me.BtnHapusTamu.Text = "Hapus"
+        Me.BtnHapusTamu.UseVisualStyleBackColor = False
         '
         'Hapus_Tamu
         '

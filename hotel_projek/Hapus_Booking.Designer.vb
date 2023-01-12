@@ -33,20 +33,23 @@ Partial Class Hapus_Booking
         '
         'BtnHapusBooking
         '
+        Me.BtnHapusBooking.BackColor = System.Drawing.Color.Red
+        Me.BtnHapusBooking.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnHapusBooking.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BtnHapusBooking.Location = New System.Drawing.Point(214, 216)
         Me.BtnHapusBooking.Name = "BtnHapusBooking"
         Me.BtnHapusBooking.Size = New System.Drawing.Size(114, 33)
         Me.BtnHapusBooking.TabIndex = 7
         Me.BtnHapusBooking.Text = "Hapus "
-        Me.BtnHapusBooking.UseVisualStyleBackColor = True
+        Me.BtnHapusBooking.UseVisualStyleBackColor = False
         '
         'LblNamaTamu
         '
         Me.LblNamaTamu.AutoSize = True
-        Me.LblNamaTamu.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNamaTamu.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblNamaTamu.Location = New System.Drawing.Point(302, 126)
         Me.LblNamaTamu.Name = "LblNamaTamu"
-        Me.LblNamaTamu.Size = New System.Drawing.Size(100, 20)
+        Me.LblNamaTamu.Size = New System.Drawing.Size(109, 20)
         Me.LblNamaTamu.TabIndex = 6
         Me.LblNamaTamu.Text = "Nama Tamu"
         '
@@ -93,10 +96,10 @@ Partial Class Hapus_Booking
         'LblNamaKamar
         '
         Me.LblNamaKamar.AutoSize = True
-        Me.LblNamaKamar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNamaKamar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblNamaKamar.Location = New System.Drawing.Point(302, 170)
         Me.LblNamaKamar.Name = "LblNamaKamar"
-        Me.LblNamaKamar.Size = New System.Drawing.Size(112, 20)
+        Me.LblNamaKamar.Size = New System.Drawing.Size(123, 20)
         Me.LblNamaKamar.TabIndex = 10
         Me.LblNamaKamar.Text = "Nama Kamar "
         '

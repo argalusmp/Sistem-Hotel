@@ -31,18 +31,21 @@ Partial Class Hapus_JenisKamar
         '
         'BtnDelete
         '
-        Me.BtnDelete.Location = New System.Drawing.Point(217, 299)
+        Me.BtnDelete.BackColor = System.Drawing.Color.Red
+        Me.BtnDelete.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnDelete.Location = New System.Drawing.Point(286, 216)
         Me.BtnDelete.Name = "BtnDelete"
-        Me.BtnDelete.Size = New System.Drawing.Size(281, 44)
+        Me.BtnDelete.Size = New System.Drawing.Size(127, 44)
         Me.BtnDelete.TabIndex = 5
         Me.BtnDelete.Text = "Hapus"
-        Me.BtnDelete.UseVisualStyleBackColor = True
+        Me.BtnDelete.UseVisualStyleBackColor = False
         '
         'LblConsole
         '
         Me.LblConsole.AutoSize = True
         Me.LblConsole.Font = New System.Drawing.Font("MV Boli", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblConsole.Location = New System.Drawing.Point(203, 180)
+        Me.LblConsole.Location = New System.Drawing.Point(152, 124)
         Me.LblConsole.Name = "LblConsole"
         Me.LblConsole.Size = New System.Drawing.Size(72, 26)
         Me.LblConsole.TabIndex = 4
@@ -52,7 +55,7 @@ Partial Class Hapus_JenisKamar
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("MS Reference Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(103, 103)
+        Me.Label1.Location = New System.Drawing.Point(52, 47)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(551, 26)
         Me.Label1.TabIndex = 3
@@ -62,7 +65,7 @@ Partial Class Hapus_JenisKamar
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(504, 190)
+        Me.Label2.Location = New System.Drawing.Point(453, 134)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(88, 20)
         Me.Label2.TabIndex = 6
@@ -72,7 +75,7 @@ Partial Class Hapus_JenisKamar
         '
         Me.Lblharga.AutoSize = True
         Me.Lblharga.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lblharga.Location = New System.Drawing.Point(383, 188)
+        Me.Lblharga.Location = New System.Drawing.Point(332, 132)
         Me.Lblharga.Name = "Lblharga"
         Me.Lblharga.Size = New System.Drawing.Size(64, 22)
         Me.Lblharga.TabIndex = 7
@@ -82,7 +85,7 @@ Partial Class Hapus_JenisKamar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(687, 310)
         Me.Controls.Add(Me.Lblharga)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.BtnDelete)

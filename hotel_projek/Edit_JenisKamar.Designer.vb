@@ -27,22 +27,26 @@ Partial Class Edit_JenisKamar
         Me.TxtHargaPerMalam = New System.Windows.Forms.TextBox()
         Me.TxtJenisKamar = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'BtnUbah
         '
-        Me.BtnUbah.Location = New System.Drawing.Point(330, 278)
+        Me.BtnUbah.BackColor = System.Drawing.Color.DarkOrange
+        Me.BtnUbah.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnUbah.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnUbah.Location = New System.Drawing.Point(435, 242)
         Me.BtnUbah.Name = "BtnUbah"
-        Me.BtnUbah.Size = New System.Drawing.Size(135, 31)
+        Me.BtnUbah.Size = New System.Drawing.Size(97, 31)
         Me.BtnUbah.TabIndex = 9
-        Me.BtnUbah.Text = "Ubah"
-        Me.BtnUbah.UseVisualStyleBackColor = True
+        Me.BtnUbah.Text = "Edit"
+        Me.BtnUbah.UseVisualStyleBackColor = False
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(109, 178)
+        Me.Label2.Location = New System.Drawing.Point(52, 176)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(120, 20)
         Me.Label2.TabIndex = 8
@@ -50,33 +54,45 @@ Partial Class Edit_JenisKamar
         '
         'TxtHargaPerMalam
         '
-        Me.TxtHargaPerMalam.Location = New System.Drawing.Point(330, 176)
+        Me.TxtHargaPerMalam.Location = New System.Drawing.Point(203, 174)
         Me.TxtHargaPerMalam.Name = "TxtHargaPerMalam"
-        Me.TxtHargaPerMalam.Size = New System.Drawing.Size(200, 22)
+        Me.TxtHargaPerMalam.Size = New System.Drawing.Size(329, 22)
         Me.TxtHargaPerMalam.TabIndex = 7
         '
         'TxtJenisKamar
         '
-        Me.TxtJenisKamar.Location = New System.Drawing.Point(330, 111)
+        Me.TxtJenisKamar.Location = New System.Drawing.Point(203, 109)
         Me.TxtJenisKamar.Name = "TxtJenisKamar"
-        Me.TxtJenisKamar.Size = New System.Drawing.Size(200, 22)
+        Me.TxtJenisKamar.Size = New System.Drawing.Size(329, 22)
         Me.TxtJenisKamar.TabIndex = 6
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(109, 113)
+        Me.Label1.Location = New System.Drawing.Point(52, 111)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(103, 20)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Jenis Kamar"
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(172, 28)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(278, 29)
+        Me.Label3.TabIndex = 10
+        Me.Label3.Text = "Form Edit Jenis Kamar" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
         'Edit_JenisKamar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(602, 309)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.BtnUbah)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TxtHargaPerMalam)
@@ -94,4 +110,5 @@ Partial Class Edit_JenisKamar
     Friend WithEvents TxtHargaPerMalam As TextBox
     Friend WithEvents TxtJenisKamar As TextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents Label3 As Label
 End Class
