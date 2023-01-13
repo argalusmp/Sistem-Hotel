@@ -40,86 +40,84 @@ Partial Class Edit_Booking
         '
         'BtnEditBooking
         '
-        Me.BtnEditBooking.Font = New System.Drawing.Font("Palatino Linotype", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnEditBooking.Location = New System.Drawing.Point(215, 360)
-        Me.BtnEditBooking.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnEditBooking.BackColor = System.Drawing.Color.DarkOrange
+        Me.BtnEditBooking.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEditBooking.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnEditBooking.Location = New System.Drawing.Point(584, 428)
+        Me.BtnEditBooking.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnEditBooking.Name = "BtnEditBooking"
-        Me.BtnEditBooking.Size = New System.Drawing.Size(157, 36)
+        Me.BtnEditBooking.Size = New System.Drawing.Size(88, 37)
         Me.BtnEditBooking.TabIndex = 19
-        Me.BtnEditBooking.Text = "Edit Booking"
-        Me.BtnEditBooking.UseVisualStyleBackColor = True
+        Me.BtnEditBooking.Text = "Edit "
+        Me.BtnEditBooking.UseVisualStyleBackColor = False
         '
         'DateCheckOut
         '
-        Me.DateCheckOut.Location = New System.Drawing.Point(235, 283)
-        Me.DateCheckOut.Margin = New System.Windows.Forms.Padding(2)
+        Me.DateCheckOut.Location = New System.Drawing.Point(313, 348)
+        Me.DateCheckOut.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DateCheckOut.Name = "DateCheckOut"
-        Me.DateCheckOut.Size = New System.Drawing.Size(270, 20)
+        Me.DateCheckOut.Size = New System.Drawing.Size(359, 22)
         Me.DateCheckOut.TabIndex = 18
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(65, 289)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label5.Location = New System.Drawing.Point(87, 356)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(58, 13)
+        Me.Label5.Size = New System.Drawing.Size(68, 16)
         Me.Label5.TabIndex = 17
         Me.Label5.Text = "Check Out"
         '
         'DateCheckIn
         '
-        Me.DateCheckIn.Location = New System.Drawing.Point(235, 221)
-        Me.DateCheckIn.Margin = New System.Windows.Forms.Padding(2)
+        Me.DateCheckIn.Location = New System.Drawing.Point(313, 272)
+        Me.DateCheckIn.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DateCheckIn.Name = "DateCheckIn"
-        Me.DateCheckIn.Size = New System.Drawing.Size(270, 20)
+        Me.DateCheckIn.Size = New System.Drawing.Size(359, 22)
         Me.DateCheckIn.TabIndex = 16
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(65, 227)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label4.Location = New System.Drawing.Point(87, 279)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(50, 13)
+        Me.Label4.Size = New System.Drawing.Size(58, 16)
         Me.Label4.TabIndex = 15
         Me.Label4.Text = "Check In"
         '
         'CBNamaKamar
         '
         Me.CBNamaKamar.FormattingEnabled = True
-        Me.CBNamaKamar.Location = New System.Drawing.Point(235, 163)
-        Me.CBNamaKamar.Margin = New System.Windows.Forms.Padding(2)
+        Me.CBNamaKamar.Location = New System.Drawing.Point(313, 201)
+        Me.CBNamaKamar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.CBNamaKamar.Name = "CBNamaKamar"
-        Me.CBNamaKamar.Size = New System.Drawing.Size(270, 21)
+        Me.CBNamaKamar.Size = New System.Drawing.Size(359, 24)
         Me.CBNamaKamar.TabIndex = 14
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(65, 169)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Location = New System.Drawing.Point(87, 208)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(68, 13)
+        Me.Label3.Size = New System.Drawing.Size(86, 16)
         Me.Label3.TabIndex = 13
         Me.Label3.Text = "Nama Kamar"
         '
         'CBNamaTamu
         '
         Me.CBNamaTamu.FormattingEnabled = True
-        Me.CBNamaTamu.Location = New System.Drawing.Point(235, 109)
-        Me.CBNamaTamu.Margin = New System.Windows.Forms.Padding(2)
+        Me.CBNamaTamu.Location = New System.Drawing.Point(313, 134)
+        Me.CBNamaTamu.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.CBNamaTamu.Name = "CBNamaTamu"
-        Me.CBNamaTamu.Size = New System.Drawing.Size(270, 21)
+        Me.CBNamaTamu.Size = New System.Drawing.Size(359, 24)
         Me.CBNamaTamu.TabIndex = 12
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(65, 112)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Location = New System.Drawing.Point(87, 138)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(65, 13)
+        Me.Label2.Size = New System.Drawing.Size(82, 16)
         Me.Label2.TabIndex = 11
         Me.Label2.Text = "Nama Tamu"
         '
@@ -127,58 +125,53 @@ Partial Class Edit_Booking
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Times New Roman", 17.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(187, 36)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(249, 44)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(218, 25)
+        Me.Label1.Size = New System.Drawing.Size(271, 32)
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "Edit Booking Kamar"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(189, 112)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label6.Location = New System.Drawing.Point(252, 138)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(10, 13)
+        Me.Label6.Size = New System.Drawing.Size(10, 16)
         Me.Label6.TabIndex = 20
         Me.Label6.Text = ":"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(189, 169)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label7.Location = New System.Drawing.Point(252, 208)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(10, 13)
+        Me.Label7.Size = New System.Drawing.Size(10, 16)
         Me.Label7.TabIndex = 21
         Me.Label7.Text = ":"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(189, 228)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label8.Location = New System.Drawing.Point(252, 281)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(10, 13)
+        Me.Label8.Size = New System.Drawing.Size(10, 16)
         Me.Label8.TabIndex = 22
         Me.Label8.Text = ":"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(189, 289)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label9.Location = New System.Drawing.Point(252, 356)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(10, 13)
+        Me.Label9.Size = New System.Drawing.Size(10, 16)
         Me.Label9.TabIndex = 23
         Me.Label9.Text = ":"
         '
         'Edit_Booking
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(594, 450)
+        Me.ClientSize = New System.Drawing.Size(792, 497)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
@@ -193,6 +186,7 @@ Partial Class Edit_Booking
         Me.Controls.Add(Me.CBNamaTamu)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Edit_Booking"
         Me.Text = "Edit_Booking"
         Me.ResumeLayout(False)

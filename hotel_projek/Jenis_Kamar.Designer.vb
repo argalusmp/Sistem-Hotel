@@ -35,45 +35,48 @@ Partial Class Jenis_Kamar
         'DataGridViewJenisKamar
         '
         Me.DataGridViewJenisKamar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewJenisKamar.Location = New System.Drawing.Point(135, 96)
+        Me.DataGridViewJenisKamar.Location = New System.Drawing.Point(73, 96)
         Me.DataGridViewJenisKamar.Name = "DataGridViewJenisKamar"
         Me.DataGridViewJenisKamar.RowHeadersWidth = 51
         Me.DataGridViewJenisKamar.RowTemplate.Height = 24
-        Me.DataGridViewJenisKamar.Size = New System.Drawing.Size(450, 308)
+        Me.DataGridViewJenisKamar.Size = New System.Drawing.Size(449, 308)
         Me.DataGridViewJenisKamar.TabIndex = 0
         '
         'BtnAdd
         '
-        Me.BtnAdd.BackColor = System.Drawing.Color.LightBlue
-        Me.BtnAdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAdd.Location = New System.Drawing.Point(135, 409)
+        Me.BtnAdd.BackColor = System.Drawing.Color.LimeGreen
+        Me.BtnAdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnAdd.Location = New System.Drawing.Point(433, 421)
         Me.BtnAdd.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnAdd.Name = "BtnAdd"
-        Me.BtnAdd.Size = New System.Drawing.Size(91, 30)
+        Me.BtnAdd.Size = New System.Drawing.Size(91, 38)
         Me.BtnAdd.TabIndex = 2
         Me.BtnAdd.Text = "Tambah "
         Me.BtnAdd.UseVisualStyleBackColor = False
         '
         'BtnRemove
         '
-        Me.BtnRemove.BackColor = System.Drawing.Color.LightCoral
-        Me.BtnRemove.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnRemove.Location = New System.Drawing.Point(311, 409)
+        Me.BtnRemove.BackColor = System.Drawing.Color.Red
+        Me.BtnRemove.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnRemove.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnRemove.Location = New System.Drawing.Point(245, 422)
         Me.BtnRemove.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnRemove.Name = "BtnRemove"
-        Me.BtnRemove.Size = New System.Drawing.Size(77, 30)
+        Me.BtnRemove.Size = New System.Drawing.Size(77, 38)
         Me.BtnRemove.TabIndex = 3
         Me.BtnRemove.Text = "Hapus"
         Me.BtnRemove.UseVisualStyleBackColor = False
         '
         'BtnEdit
         '
-        Me.BtnEdit.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.BtnEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnEdit.Location = New System.Drawing.Point(508, 409)
+        Me.BtnEdit.BackColor = System.Drawing.Color.DarkOrange
+        Me.BtnEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnEdit.Location = New System.Drawing.Point(340, 421)
         Me.BtnEdit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnEdit.Name = "BtnEdit"
-        Me.BtnEdit.Size = New System.Drawing.Size(77, 30)
+        Me.BtnEdit.Size = New System.Drawing.Size(77, 38)
         Me.BtnEdit.TabIndex = 4
         Me.BtnEdit.Text = "Edit"
         Me.BtnEdit.UseVisualStyleBackColor = False
@@ -82,7 +85,7 @@ Partial Class Jenis_Kamar
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Palatino Linotype", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(292, 9)
+        Me.Label1.Location = New System.Drawing.Point(240, 16)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(128, 27)
         Me.Label1.TabIndex = 5
@@ -92,7 +95,7 @@ Partial Class Jenis_Kamar
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("MV Boli", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(241, 45)
+        Me.Label2.Location = New System.Drawing.Point(183, 43)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(244, 37)
         Me.Label2.TabIndex = 6
@@ -100,7 +103,8 @@ Partial Class Jenis_Kamar
         '
         'btnBack
         '
-        Me.btnBack.Location = New System.Drawing.Point(12, 12)
+        Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBack.Location = New System.Drawing.Point(22, 453)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(94, 36)
         Me.btnBack.TabIndex = 15
@@ -112,7 +116,7 @@ Partial Class Jenis_Kamar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(610, 512)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)

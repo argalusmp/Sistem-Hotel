@@ -81,10 +81,11 @@ Partial Class Checkout
         '
         Me.btnSubmit.BackColor = System.Drawing.Color.Green
         Me.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSubmit.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSubmit.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnSubmit.Location = New System.Drawing.Point(275, 434)
+        Me.btnSubmit.Location = New System.Drawing.Point(275, 413)
         Me.btnSubmit.Name = "btnSubmit"
-        Me.btnSubmit.Size = New System.Drawing.Size(130, 40)
+        Me.btnSubmit.Size = New System.Drawing.Size(109, 32)
         Me.btnSubmit.TabIndex = 5
         Me.btnSubmit.Text = "OK"
         Me.btnSubmit.UseVisualStyleBackColor = False
@@ -93,10 +94,11 @@ Partial Class Checkout
         '
         Me.btnCancel.BackColor = System.Drawing.Color.Red
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancel.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnCancel.Location = New System.Drawing.Point(139, 435)
+        Me.btnCancel.Location = New System.Drawing.Point(139, 414)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(130, 40)
+        Me.btnCancel.Size = New System.Drawing.Size(109, 32)
         Me.btnCancel.TabIndex = 6
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = False
@@ -166,7 +168,7 @@ Partial Class Checkout
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Verdana", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(20, 31)
+        Me.Label7.Location = New System.Drawing.Point(72, 30)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(277, 48)
         Me.Label7.TabIndex = 13

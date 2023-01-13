@@ -37,7 +37,7 @@ Partial Class Edit_JenisKamar
         Me.BtnUbah.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BtnUbah.Location = New System.Drawing.Point(435, 242)
         Me.BtnUbah.Name = "BtnUbah"
-        Me.BtnUbah.Size = New System.Drawing.Size(97, 31)
+        Me.BtnUbah.Size = New System.Drawing.Size(97, 40)
         Me.BtnUbah.TabIndex = 9
         Me.BtnUbah.Text = "Edit"
         Me.BtnUbah.UseVisualStyleBackColor = False

@@ -65,7 +65,7 @@ Partial Class Hapus_JenisKamar
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(453, 134)
+        Me.Label2.Location = New System.Drawing.Point(452, 124)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(88, 20)
         Me.Label2.TabIndex = 6
@@ -75,7 +75,7 @@ Partial Class Hapus_JenisKamar
         '
         Me.Lblharga.AutoSize = True
         Me.Lblharga.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lblharga.Location = New System.Drawing.Point(332, 132)
+        Me.Lblharga.Location = New System.Drawing.Point(318, 124)
         Me.Lblharga.Name = "Lblharga"
         Me.Lblharga.Size = New System.Drawing.Size(64, 22)
         Me.Lblharga.TabIndex = 7

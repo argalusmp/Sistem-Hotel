@@ -44,7 +44,7 @@ Partial Class Edit_Kamar
         'LblIdKamar
         '
         Me.LblIdKamar.AutoSize = True
-        Me.LblIdKamar.Location = New System.Drawing.Point(370, 187)
+        Me.LblIdKamar.Location = New System.Drawing.Point(269, 179)
         Me.LblIdKamar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblIdKamar.Name = "LblIdKamar"
         Me.LblIdKamar.Size = New System.Drawing.Size(62, 16)
@@ -54,7 +54,7 @@ Partial Class Edit_Kamar
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(148, 187)
+        Me.Label3.Location = New System.Drawing.Point(47, 179)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(62, 16)
@@ -64,7 +64,7 @@ Partial Class Edit_Kamar
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(278, 372)
+        Me.Label10.Location = New System.Drawing.Point(177, 364)
         Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(10, 16)
@@ -74,7 +74,7 @@ Partial Class Edit_Kamar
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(278, 311)
+        Me.Label9.Location = New System.Drawing.Point(177, 303)
         Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(10, 16)
@@ -84,7 +84,7 @@ Partial Class Edit_Kamar
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(278, 248)
+        Me.Label8.Location = New System.Drawing.Point(177, 240)
         Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(10, 16)
@@ -94,7 +94,7 @@ Partial Class Edit_Kamar
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(278, 187)
+        Me.Label7.Location = New System.Drawing.Point(177, 179)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(10, 16)
@@ -104,12 +104,12 @@ Partial Class Edit_Kamar
         'BtnEdit
         '
         Me.BtnEdit.BackColor = System.Drawing.Color.Green
-        Me.BtnEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.BtnEdit.Location = New System.Drawing.Point(814, 484)
+        Me.BtnEdit.Location = New System.Drawing.Point(471, 470)
         Me.BtnEdit.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnEdit.Name = "BtnEdit"
-        Me.BtnEdit.Size = New System.Drawing.Size(100, 37)
+        Me.BtnEdit.Size = New System.Drawing.Size(100, 40)
         Me.BtnEdit.TabIndex = 63
         Me.BtnEdit.Text = "Edit"
         Me.BtnEdit.UseVisualStyleBackColor = False
@@ -117,7 +117,7 @@ Partial Class Edit_Kamar
         'RbtnKosong
         '
         Me.RbtnKosong.AutoSize = True
-        Me.RbtnKosong.Location = New System.Drawing.Point(372, 424)
+        Me.RbtnKosong.Location = New System.Drawing.Point(271, 416)
         Me.RbtnKosong.Margin = New System.Windows.Forms.Padding(4)
         Me.RbtnKosong.Name = "RbtnKosong"
         Me.RbtnKosong.Size = New System.Drawing.Size(74, 20)
@@ -129,7 +129,7 @@ Partial Class Edit_Kamar
         'RbtnTerisi
         '
         Me.RbtnTerisi.AutoSize = True
-        Me.RbtnTerisi.Location = New System.Drawing.Point(372, 372)
+        Me.RbtnTerisi.Location = New System.Drawing.Point(271, 364)
         Me.RbtnTerisi.Margin = New System.Windows.Forms.Padding(4)
         Me.RbtnTerisi.Name = "RbtnTerisi"
         Me.RbtnTerisi.Size = New System.Drawing.Size(62, 20)
@@ -140,16 +140,16 @@ Partial Class Edit_Kamar
         '
         'txtNamaKamar
         '
-        Me.txtNamaKamar.Location = New System.Drawing.Point(372, 307)
+        Me.txtNamaKamar.Location = New System.Drawing.Point(271, 299)
         Me.txtNamaKamar.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNamaKamar.Name = "txtNamaKamar"
-        Me.txtNamaKamar.Size = New System.Drawing.Size(541, 22)
+        Me.txtNamaKamar.Size = New System.Drawing.Size(300, 22)
         Me.txtNamaKamar.TabIndex = 60
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(148, 372)
+        Me.Label6.Location = New System.Drawing.Point(47, 364)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(44, 16)
@@ -159,7 +159,7 @@ Partial Class Edit_Kamar
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(148, 311)
+        Me.Label5.Location = New System.Drawing.Point(47, 303)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(86, 16)
@@ -169,7 +169,7 @@ Partial Class Edit_Kamar
         'ComboBoxIDJenisKamar
         '
         Me.ComboBoxIDJenisKamar.FormattingEnabled = True
-        Me.ComboBoxIDJenisKamar.Location = New System.Drawing.Point(372, 246)
+        Me.ComboBoxIDJenisKamar.Location = New System.Drawing.Point(271, 238)
         Me.ComboBoxIDJenisKamar.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBoxIDJenisKamar.Name = "ComboBoxIDJenisKamar"
         Me.ComboBoxIDJenisKamar.Size = New System.Drawing.Size(300, 24)
@@ -178,7 +178,7 @@ Partial Class Edit_Kamar
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(148, 248)
+        Me.Label4.Location = New System.Drawing.Point(47, 240)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(97, 16)
@@ -190,7 +190,7 @@ Partial Class Edit_Kamar
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(393, 97)
+        Me.Label2.Location = New System.Drawing.Point(201, 89)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(241, 29)
@@ -202,7 +202,7 @@ Partial Class Edit_Kamar
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(446, 61)
+        Me.Label1.Location = New System.Drawing.Point(254, 53)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(141, 29)
@@ -211,21 +211,21 @@ Partial Class Edit_Kamar
         '
         'BtnBack
         '
-        Me.BtnBack.BackColor = System.Drawing.Color.Pink
-        Me.BtnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnBack.Location = New System.Drawing.Point(13, 12)
+        Me.BtnBack.BackColor = System.Drawing.SystemColors.Menu
+        Me.BtnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnBack.Location = New System.Drawing.Point(13, 533)
         Me.BtnBack.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnBack.Name = "BtnBack"
         Me.BtnBack.Size = New System.Drawing.Size(100, 33)
         Me.BtnBack.TabIndex = 53
-        Me.BtnBack.Text = "Back"
+        Me.BtnBack.Text = "< Back"
         Me.BtnBack.UseVisualStyleBackColor = False
         '
         'Edit_Kamar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1025, 579)
+        Me.ClientSize = New System.Drawing.Size(643, 579)
         Me.Controls.Add(Me.LblIdKamar)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label10)

@@ -42,33 +42,43 @@ Partial Class Tamu
         '
         'BtnTambah
         '
+        Me.BtnTambah.BackColor = System.Drawing.Color.LimeGreen
+        Me.BtnTambah.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnTambah.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BtnTambah.Location = New System.Drawing.Point(650, 420)
         Me.BtnTambah.Name = "BtnTambah"
-        Me.BtnTambah.Size = New System.Drawing.Size(91, 32)
+        Me.BtnTambah.Size = New System.Drawing.Size(91, 38)
         Me.BtnTambah.TabIndex = 1
         Me.BtnTambah.Text = "Tambah"
-        Me.BtnTambah.UseVisualStyleBackColor = True
+        Me.BtnTambah.UseVisualStyleBackColor = False
         '
         'BtnEdit
         '
+        Me.BtnEdit.BackColor = System.Drawing.Color.DarkOrange
+        Me.BtnEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BtnEdit.Location = New System.Drawing.Point(542, 420)
         Me.BtnEdit.Name = "BtnEdit"
-        Me.BtnEdit.Size = New System.Drawing.Size(91, 32)
+        Me.BtnEdit.Size = New System.Drawing.Size(91, 38)
         Me.BtnEdit.TabIndex = 2
         Me.BtnEdit.Text = "Edit"
-        Me.BtnEdit.UseVisualStyleBackColor = True
+        Me.BtnEdit.UseVisualStyleBackColor = False
         '
         'BtnHapus
         '
+        Me.BtnHapus.BackColor = System.Drawing.Color.Red
+        Me.BtnHapus.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnHapus.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BtnHapus.Location = New System.Drawing.Point(429, 420)
         Me.BtnHapus.Name = "BtnHapus"
-        Me.BtnHapus.Size = New System.Drawing.Size(91, 32)
+        Me.BtnHapus.Size = New System.Drawing.Size(91, 38)
         Me.BtnHapus.TabIndex = 3
         Me.BtnHapus.Text = "Hapus"
-        Me.BtnHapus.UseVisualStyleBackColor = True
+        Me.BtnHapus.UseVisualStyleBackColor = False
         '
         'btnBack
         '
+        Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBack.Location = New System.Drawing.Point(23, 450)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(94, 36)

@@ -31,6 +31,7 @@ Partial Class Menu
         '
         'btnTamu
         '
+        Me.btnTamu.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnTamu.Location = New System.Drawing.Point(33, 30)
         Me.btnTamu.Name = "btnTamu"
         Me.btnTamu.Size = New System.Drawing.Size(203, 42)
@@ -40,6 +41,7 @@ Partial Class Menu
         '
         'btnKamar
         '
+        Me.btnKamar.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnKamar.Location = New System.Drawing.Point(33, 96)
         Me.btnKamar.Name = "btnKamar"
         Me.btnKamar.Size = New System.Drawing.Size(203, 42)
@@ -49,6 +51,7 @@ Partial Class Menu
         '
         'btnJenisKamar
         '
+        Me.btnJenisKamar.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnJenisKamar.Location = New System.Drawing.Point(33, 164)
         Me.btnJenisKamar.Name = "btnJenisKamar"
         Me.btnJenisKamar.Size = New System.Drawing.Size(203, 42)
@@ -58,6 +61,7 @@ Partial Class Menu
         '
         'btnBooking
         '
+        Me.btnBooking.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBooking.Location = New System.Drawing.Point(33, 230)
         Me.btnBooking.Name = "btnBooking"
         Me.btnBooking.Size = New System.Drawing.Size(203, 42)
@@ -70,6 +74,7 @@ Partial Class Menu
         Me.btnLogout.BackColor = System.Drawing.Color.Red
         Me.btnLogout.FlatAppearance.BorderSize = 0
         Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogout.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.btnLogout.Location = New System.Drawing.Point(33, 303)
         Me.btnLogout.Name = "btnLogout"

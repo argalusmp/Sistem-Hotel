@@ -22,7 +22,7 @@ Partial Class Kamar
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DataGridKamar = New System.Windows.Forms.DataGridView()
         Me.BtnTambah = New System.Windows.Forms.Button()
@@ -50,9 +50,9 @@ Partial Class Kamar
         Me.GroupBox1.Controls.Add(Me.BtnHapus)
         Me.GroupBox1.Controls.Add(Me.BtnEdit)
         Me.GroupBox1.Location = New System.Drawing.Point(19, 185)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Size = New System.Drawing.Size(1035, 441)
         Me.GroupBox1.TabIndex = 43
         Me.GroupBox1.TabStop = False
@@ -65,18 +65,18 @@ Partial Class Kamar
         Me.DataGridKamar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridKamar.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
         Me.DataGridKamar.BackgroundColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridKamar.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridKamar.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridKamar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridKamar.GridColor = System.Drawing.Color.Pink
         Me.DataGridKamar.Location = New System.Drawing.Point(27, 78)
-        Me.DataGridKamar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataGridKamar.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridKamar.Name = "DataGridKamar"
         Me.DataGridKamar.ReadOnly = True
         Me.DataGridKamar.RowHeadersWidth = 51
@@ -89,7 +89,7 @@ Partial Class Kamar
         Me.BtnTambah.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnTambah.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnTambah.Location = New System.Drawing.Point(912, 23)
-        Me.BtnTambah.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnTambah.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnTambah.Name = "BtnTambah"
         Me.BtnTambah.Size = New System.Drawing.Size(100, 37)
         Me.BtnTambah.TabIndex = 31
@@ -102,7 +102,7 @@ Partial Class Kamar
         Me.BtnHapus.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnHapus.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.BtnHapus.Location = New System.Drawing.Point(684, 23)
-        Me.BtnHapus.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnHapus.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnHapus.Name = "BtnHapus"
         Me.BtnHapus.Size = New System.Drawing.Size(100, 37)
         Me.BtnHapus.TabIndex = 5
@@ -115,7 +115,7 @@ Partial Class Kamar
         Me.BtnEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnEdit.ForeColor = System.Drawing.SystemColors.ControlText
         Me.BtnEdit.Location = New System.Drawing.Point(799, 23)
-        Me.BtnEdit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BtnEdit.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnEdit.Name = "BtnEdit"
         Me.BtnEdit.Size = New System.Drawing.Size(100, 37)
         Me.BtnEdit.TabIndex = 30
@@ -137,37 +137,37 @@ Partial Class Kamar
         'JenisKamarToolStripMenuItem
         '
         Me.JenisKamarToolStripMenuItem.Name = "JenisKamarToolStripMenuItem"
-        Me.JenisKamarToolStripMenuItem.Size = New System.Drawing.Size(101, 24)
+        Me.JenisKamarToolStripMenuItem.Size = New System.Drawing.Size(101, 26)
         Me.JenisKamarToolStripMenuItem.Text = "Jenis Kamar"
         '
         'KamarToolStripMenuItem
         '
         Me.KamarToolStripMenuItem.Name = "KamarToolStripMenuItem"
-        Me.KamarToolStripMenuItem.Size = New System.Drawing.Size(66, 24)
+        Me.KamarToolStripMenuItem.Size = New System.Drawing.Size(66, 26)
         Me.KamarToolStripMenuItem.Text = "Kamar"
         '
         'TamuToolStripMenuItem
         '
         Me.TamuToolStripMenuItem.Name = "TamuToolStripMenuItem"
-        Me.TamuToolStripMenuItem.Size = New System.Drawing.Size(58, 24)
+        Me.TamuToolStripMenuItem.Size = New System.Drawing.Size(58, 26)
         Me.TamuToolStripMenuItem.Text = "Tamu"
         '
         'BookingKamarToolStripMenuItem
         '
         Me.BookingKamarToolStripMenuItem.Name = "BookingKamarToolStripMenuItem"
-        Me.BookingKamarToolStripMenuItem.Size = New System.Drawing.Size(125, 24)
+        Me.BookingKamarToolStripMenuItem.Size = New System.Drawing.Size(125, 26)
         Me.BookingKamarToolStripMenuItem.Text = "Booking Kamar"
         '
         'CheckOutToolStripMenuItem
         '
         Me.CheckOutToolStripMenuItem.Name = "CheckOutToolStripMenuItem"
-        Me.CheckOutToolStripMenuItem.Size = New System.Drawing.Size(86, 24)
+        Me.CheckOutToolStripMenuItem.Size = New System.Drawing.Size(86, 26)
         Me.CheckOutToolStripMenuItem.Text = "CheckOut"
         '
         'SignOutToolStripMenuItem
         '
         Me.SignOutToolStripMenuItem.Name = "SignOutToolStripMenuItem"
-        Me.SignOutToolStripMenuItem.Size = New System.Drawing.Size(76, 24)
+        Me.SignOutToolStripMenuItem.Size = New System.Drawing.Size(76, 26)
         Me.SignOutToolStripMenuItem.Text = "SignOut"
         '
         'Label2
@@ -175,7 +175,7 @@ Partial Class Kamar
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(355, 114)
+        Me.Label2.Location = New System.Drawing.Point(410, 114)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(241, 29)
@@ -187,7 +187,7 @@ Partial Class Kamar
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(381, 79)
+        Me.Label1.Location = New System.Drawing.Point(436, 79)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(190, 29)
@@ -196,6 +196,7 @@ Partial Class Kamar
         '
         'btnBack
         '
+        Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBack.Location = New System.Drawing.Point(28, 692)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(94, 36)

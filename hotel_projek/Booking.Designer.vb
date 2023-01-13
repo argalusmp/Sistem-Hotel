@@ -39,41 +39,51 @@ Partial Class Booking
         Me.DataGridViewBooking.Name = "DataGridViewBooking"
         Me.DataGridViewBooking.RowHeadersWidth = 51
         Me.DataGridViewBooking.RowTemplate.Height = 24
-        Me.DataGridViewBooking.Size = New System.Drawing.Size(1185, 297)
+        Me.DataGridViewBooking.Size = New System.Drawing.Size(1185, 324)
         Me.DataGridViewBooking.TabIndex = 0
         '
         'BtnAddBook
         '
-        Me.BtnAddBook.Location = New System.Drawing.Point(898, 355)
+        Me.BtnAddBook.BackColor = System.Drawing.Color.LimeGreen
+        Me.BtnAddBook.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAddBook.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnAddBook.Location = New System.Drawing.Point(1146, 355)
         Me.BtnAddBook.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnAddBook.Name = "BtnAddBook"
-        Me.BtnAddBook.Size = New System.Drawing.Size(149, 34)
+        Me.BtnAddBook.Size = New System.Drawing.Size(98, 34)
         Me.BtnAddBook.TabIndex = 1
-        Me.BtnAddBook.Text = "Tambah Booking"
-        Me.BtnAddBook.UseVisualStyleBackColor = True
+        Me.BtnAddBook.Text = "Tambah "
+        Me.BtnAddBook.UseVisualStyleBackColor = False
         '
         'BtnRemoveBook
         '
-        Me.BtnRemoveBook.Location = New System.Drawing.Point(1150, 355)
+        Me.BtnRemoveBook.BackColor = System.Drawing.Color.Red
+        Me.BtnRemoveBook.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnRemoveBook.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnRemoveBook.Location = New System.Drawing.Point(929, 355)
         Me.BtnRemoveBook.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnRemoveBook.Name = "BtnRemoveBook"
         Me.BtnRemoveBook.Size = New System.Drawing.Size(91, 34)
         Me.BtnRemoveBook.TabIndex = 2
-        Me.BtnRemoveBook.Text = "Remove"
-        Me.BtnRemoveBook.UseVisualStyleBackColor = True
+        Me.BtnRemoveBook.Text = "Hapus"
+        Me.BtnRemoveBook.UseVisualStyleBackColor = False
         '
         'BtnEditBook
         '
-        Me.BtnEditBook.Location = New System.Drawing.Point(1053, 355)
+        Me.BtnEditBook.BackColor = System.Drawing.Color.DarkOrange
+        Me.BtnEditBook.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEditBook.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BtnEditBook.Location = New System.Drawing.Point(1040, 355)
         Me.BtnEditBook.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnEditBook.Name = "BtnEditBook"
         Me.BtnEditBook.Size = New System.Drawing.Size(91, 34)
         Me.BtnEditBook.TabIndex = 3
         Me.BtnEditBook.Text = "Edit"
-        Me.BtnEditBook.UseVisualStyleBackColor = True
+        Me.BtnEditBook.UseVisualStyleBackColor = False
         '
         'btnBack
         '
+        Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBack.Location = New System.Drawing.Point(59, 402)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(94, 36)
@@ -83,10 +93,11 @@ Partial Class Booking
         '
         'BtnCheckout
         '
-        Me.BtnCheckout.Location = New System.Drawing.Point(743, 355)
+        Me.BtnCheckout.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCheckout.Location = New System.Drawing.Point(787, 355)
         Me.BtnCheckout.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnCheckout.Name = "BtnCheckout"
-        Me.BtnCheckout.Size = New System.Drawing.Size(149, 34)
+        Me.BtnCheckout.Size = New System.Drawing.Size(118, 34)
         Me.BtnCheckout.TabIndex = 16
         Me.BtnCheckout.Text = "Check Out"
         Me.BtnCheckout.UseVisualStyleBackColor = True
